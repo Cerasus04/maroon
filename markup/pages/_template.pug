@@ -1,0 +1,12 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head.pug
+    include ../components/header/header.pug
+
+    head
+        +head(head.defaults)
+    body.page
+        +header()
+        block section
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

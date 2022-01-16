@@ -1,0 +1,72 @@
+.header {
+    background-color: $color-default-white;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    width: 100%;
+    min-width: 320px;
+    padding: 40px 98px;
+    border-bottom: 1px solid $color-border;
+    transition: 0.3s;
+}
+
+.header--transparent {
+    background: 0 0;
+    border-color: transparent;
+}
+
+.header--colored {
+    background: $color-default-white;
+    border-color: $color-border;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.header__actions {
+    margin: 0 0 0 51px;
+    padding: 0;
+}
+
+@include tablet {
+    .header {
+        padding: 40px 45px;
+    }
+    .header__actions {
+        margin: 0;
+    }
+    .header__nav {
+        display: flex;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        transform: translateY(100%);
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.15s opacity;
+        z-index: 15;
+        background-color: $color-background;
+        box-shadow: 0 4px 30px $color-shadow;
+    }
+    .header__nav--open {
+        display: flex;
+        overflow-y: auto;
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+@include mobile {
+    .header {
+        padding: 30px 15px;
+    }
+}

@@ -1,0 +1,31 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    outline: 0;
+    transition: 0.2s;
+}
+.logo:active,
+.logo:focus,
+.logo:hover {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+.logo img {
+    height: 21px;
+    width: 131px;
+}
+@include tablet {
+    // .logo {
+    //     width: 85px;
+    // }
+}
+
+@include mobile  {
+    .logo {
+        margin-left: auto;
+    }
+    .logo img {
+        height: 13px;
+        width: 85px;
+    }
+}

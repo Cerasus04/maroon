@@ -1,0 +1,29 @@
+.user-actions {
+    @include nl;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-actions__item:not(:first-child) {
+    margin-left: 16px;
+}
+
+.user-actions__link {
+    display: flex;
+    transition: 0.2s;
+    outline: 0;
+    color: $color-main-text;
+}
+
+.user-actions__link:active,
+.user-actions__link:focus,
+.user-actions__link:hover {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+@include mobile {
+    .user-actions__item:not(:first-child) {
+        margin-left: 8px;
+    }
+}

@@ -1,0 +1,40 @@
+.burger-btn {
+    @include bg-svg($burger-icon);
+    display: none;
+    padding: 0;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+    outline: 0;
+    background-color: transparent;
+}
+
+.burger-btn:active,
+.burger-btn:focus,
+.burger-btn:hover {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.burger-btn {
+    &.active {
+        @include bg-svg($cross-icon);
+    }
+}
+
+@include tablet {
+    .burger-btn {
+        display: block;
+        // height: 18px;
+        // width: 24px;
+        // margin-right: 40px;
+    }
+}
+
+@include mobile {
+    .burger-btn {
+        // height: 14px;
+        // width: 22px;
+        // margin-right: 26px;
+    }
+}

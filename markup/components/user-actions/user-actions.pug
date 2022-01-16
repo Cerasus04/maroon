@@ -1,0 +1,8 @@
+include ../ico-svg/ico-svg.pug
+
+mixin user-actions(params)
+    ul.user-actions&attributes(attributes)
+        each item in params
+            li.user-actions__item
+                a(class='user-actions__link user-actions__link--' + item.link href=item.href target="_blank" aria-label=item.ariaLabel)
+                    +ico-svg(item.svg)

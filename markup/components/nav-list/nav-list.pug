@@ -1,0 +1,4 @@
+mixin nav-list(data)
+  ul.nav-list&attributes(attributes)
+    each item in data
+      li.nav-list__item: a.nav-list__link(href=item.href class=item.currentURL ? 'active' : '') #{item.text}

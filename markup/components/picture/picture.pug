@@ -1,0 +1,6 @@
+mixin picture(params)
+    picture&attributes(attributes)
+        each item in params.source
+            source(media=item.media srcset=item.srcset)
+        img(src='%=static=%img/' + params.path + "/" + params.image + "@1x." + params.format, srcset= '%=static=%img/' + params.path + "/" + params.image + "@2x." + params.format + " 2x", width= params.width, height= params.height, alt= params.altText)
+

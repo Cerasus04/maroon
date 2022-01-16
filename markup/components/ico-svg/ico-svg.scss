@@ -1,0 +1,67 @@
+// Mixin size icons
+@mixin size($size) {
+    width: $size;
+    height: $size;
+}
+
+$sm-ico: 20px;
+$lg-ico: 24px;
+$xl-ico: 36px;
+
+.ico-svg {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+
+    &--sm {
+        @include size($sm-ico);
+    }
+    &--lg {
+        @include size($lg-ico);
+    }
+    &--xl {
+        width: $xl-ico;
+        height: 9px;
+    }
+    &--inherit {
+        color: inherit;
+    }
+    // &--primary {
+    //     color: #122947;
+    // }
+//     // }
+//     // &--secondary {
+//     //     color: $body-color;
+//     //     background-color: $border-color;
+//     // }
+
+//     // &--accent {
+//     //     color: $light;
+//     // // }
+//     // &--is-active {
+//     //     color: $light;
+//     // }
+
+//     // &--primary {
+//     //     color: $primary-text;
+//     // }
+
+//     // &--accent {
+//     //     color: $accent-secondary-fill;
+//     // }
+//     // &--light {
+//     //     color: $primary-fill;
+//     // }
+//     // &--help {
+//     //     color: #cccccc;
+//     // }
+//     // &--dark {
+//     //     color: $help-text;
+//     // }
+//     // &--danger {
+//     //     color: $danger-fill;
+//     // }
+//     // &--info {
+//     //     color: $default-link-color;
+//     // }
+}

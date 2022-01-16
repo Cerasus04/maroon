@@ -1,0 +1,18 @@
+.overlay {
+    display: none;
+    border: none;
+    appearance: none;
+    background: 0 0;
+    cursor: pointer;
+}
+
+@include tablet {
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+}
