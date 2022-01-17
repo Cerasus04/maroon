@@ -1,17 +1,18 @@
 .footer {
     width: 100%;
     min-width: 320px;
-    padding: 40px 98px;
+    padding: 60px 98px 22px;
+    background-color: $color-background-inner;
 }
 
 @include tablet {
     .footer {
-        padding: 40px 45px;
+        padding: 40px 45px 22px;
     }
 }
 
 @include mobile {
     .footer {
-        padding: 30px 15px;
+        padding: 30px 15px 22px;
     }
 }

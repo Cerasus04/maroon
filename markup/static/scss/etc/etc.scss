@@ -1,3 +1,76 @@
 .outline {
     outline: 1px solid green;
 }
+/* Uncomment and set these variables to customize the grid. */
+
+.vertical-gap-xs-0 {
+    margin-bottom: 0;
+}
+.vertical-gap-xs-s { //между заголовком и текстом
+    margin-bottom: 25px;
+}
+.vertical-gap-xs-m {    //между текстом и кнопкой
+    margin-bottom: 30px;
+}
+.vertical-gap-xs-xl { //между блоками
+    margin-bottom: 80px;
+}
+
+// .vertical-twice-gap-xs-m { //в средних блоках
+//     margin-top: 54px;
+//     margin-bottom: 54px;
+// }
+.vertical-twice-gap-xs-xl { //в больших блоках
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
+@media only screen and (min-width: 48em) {
+    .vertical-gap-sm-0 {
+        margin-bottom: 0;
+    }
+    .vertical-gap-sm-s { //между заголовком и текстом
+        margin-bottom: 40px;
+    }
+    .vertical-gap-sm-m {    //между текстом и кнопкой
+        margin-bottom: 45px;
+    }
+    .vertical-gap-sm-xl { //между блоками
+        margin-bottom: 120px;
+    }
+    .vertical-twice-gap-sm-m { //в средних блоках
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+    .vertical-twice-gap-sm-xl { //в больших блоках
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+
+@media only screen and (min-width: 62em) {
+}
+
+@media only screen and (min-width: 75em) {
+    .vertical-gap-lg-0 {
+        margin-bottom: 0;
+    }
+    .vertical-gap-lg-s { //между заголовком и текстом
+        margin-bottom: 30px;
+    }
+    .vertical-gap-lg-m {    //между текстом и кнопкой
+        margin-bottom: 40px;
+    }
+    .vertical-gap-lg-xl { //между блоками
+        margin-bottom: 140px;
+    }
+    .vertical-twice-gap-lg-m { //в средних блоках
+        margin-top: 54px;
+        margin-bottom: 54px;
+    }
+    .vertical-twice-gap-lg-xl { //в больших блоках
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}

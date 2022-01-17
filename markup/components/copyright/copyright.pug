@@ -1,0 +1,6 @@
+mixin copyright(params)
+    .copyright
+        p.copyright__text !{params.text}
+        if params.link
+            a.copyright__link(href=params.href) !{params.linkText}
+
