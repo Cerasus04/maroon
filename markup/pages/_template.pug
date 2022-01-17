@@ -3,10 +3,12 @@ html(class="no-js", lang="ru")
 
     include ../components/head/head.pug
     include ../components/header/header.pug
+    include ../components/footer/footer.pug
 
     head
         +head(head.defaults)
     body.page
         +header()
         block section
+        +footer()
     script(src='%=static=%js/main%=hash=%%=min=%.js')

@@ -1,3 +1,12 @@
 extends _template.pug
+include ../components/content-img/content-img.pug
 
 append section
+    +content-img({
+        path: 'content',
+        image: 'card-lap',
+        format: 'jpg',
+        width: '343',
+        height: '229',
+        altText: 'История подопечного',
+    })

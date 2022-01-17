@@ -1,0 +1,17 @@
+.footer {
+    width: 100%;
+    min-width: 320px;
+    padding: 40px 98px;
+}
+
+@include tablet {
+    .footer {
+        padding: 40px 45px;
+    }
+}
+
+@include mobile {
+    .footer {
+        padding: 30px 15px;
+    }
+}

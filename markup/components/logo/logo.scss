@@ -4,6 +4,9 @@
     outline: 0;
     transition: 0.2s;
 }
+.logo--footer {
+    justify-content: flex-start;
+}
 .logo:active,
 .logo:focus,
 .logo:hover {
@@ -15,15 +18,10 @@
     width: 131px;
 }
 @include tablet {
-    // .logo {
-    //     width: 85px;
-    // }
+
 }
 
 @include mobile  {
-    .logo {
-        margin-left: auto;
-    }
     .logo img {
         height: 13px;
         width: 85px;

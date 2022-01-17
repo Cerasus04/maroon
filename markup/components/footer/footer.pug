@@ -1,0 +1,14 @@
+include ../logo/logo.pug
+include ../nav-list/nav-list.pug
+include ../social/social.pug
+
+mixin footer()
+    footer.footer
+        .row.middle-xs
+            .col-lg-2.col-sm-3.col-xs-6
+                +logo(logo.defaults)(class='logo--footer')
+            .col-lg-8.col-sm-6.col-xs-8.outline
+                +nav-list(nav.footer)(class='nav-list--footer')
+            .col-lg-2.col-sm-3.col-xs-12
+                +social(social.defaults)(class='social-list--footer')
+

@@ -15,7 +15,7 @@ mixin header()
             .col-lg-9
                 .header__nav
                     +overlay()
-                    +nav-list(nav.defaults)
+                    +nav-list(nav.header)(class='nav-list--header')
                     +social(social.defaults)(class='social-list--for-menu')
             .col-lg-1.col-sm-2.col-xs-3
                 +user-actions(user.defaults)(class='outline')
