@@ -1,5 +1,9 @@
 extends _template.pug
+
 include ../components/content-img/content-img.pug
+include ../components/promo-card/promo-card.pug
+include ../components/about/about.pug
+include ../components/picture/picture.pug
 
 append section
     +content-img({
@@ -10,3 +14,4 @@ append section
         height: '229',
         altText: 'История подопечного',
     })
+    +about()

@@ -1,0 +1,6 @@
+mixin promo-card(params)
+    a.promo-card(href=params.href)
+        +picture(params.picture)
+        .promo-card__text
+            span #{params.text}
+            +ico-svg(params.svg)

@@ -1,6 +1,46 @@
 mixin picture(params)
     picture&attributes(attributes)
         each item in params.source
-            source(media=item.media srcset=item.srcset)
+            source(media=item.media srcset='%=static=%img/' + item.path + "/" + item.image + "@2x." + item.format + " 2x")
         img(src='%=static=%img/' + params.path + "/" + params.image + "@1x." + params.format, srcset= '%=static=%img/' + params.path + "/" + params.image + "@2x." + params.format + " 2x", width= params.width, height= params.height, alt= params.altText)
 
+//-+picture(
+    {
+        path: 'content',
+        image: 'main1',
+        format: 'jpg',
+        width: '330',
+        height: '442',
+        altText: 'Уход для лица',
+        source: [
+            {
+                'media' : '(min-width: 1200px)'
+                'path': 'content',
+                'image': 'main1',
+                'format': 'webp'
+            },{
+                'media' : '(min-width: 1200px)'
+                'path': 'content',
+                'image': 'main1',
+                'format': 'jpg'
+            },{
+                'media' : '(min-width: 768px)'
+                'path': 'content',
+                'image': 'main1-lap',
+                'format': 'webp'
+            },{
+                'media' : '(min-width: 768px)'
+                'path': 'content',
+                'image': 'main1-lap',
+                'format': 'jpg'
+            },{
+                'path': 'content',
+                'image': 'main1-mob',
+                'format': 'webp'
+            },{
+                'path': 'content',
+                'image': 'main1-mob',
+                'format': 'jpg'
+            }
+        ]
+    })
