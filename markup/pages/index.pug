@@ -4,14 +4,120 @@ include ../components/content-img/content-img.pug
 include ../components/promo-card/promo-card.pug
 include ../components/about/about.pug
 include ../components/picture/picture.pug
+include ../components/bg-img/bg-img.pug
+include ../components/link/link.pug
+include ../components/main-title/main-title.pug
+include ../components/title/title.pug
+include ../components/description/description.pug
 
 append section
-    +content-img({
-        path: 'content',
-        image: 'card-lap',
-        format: 'jpg',
-        width: '343',
-        height: '229',
-        altText: 'История подопечного',
-    })
-    +about()
+    +bg-img()(class='bg-img--about')
+        .container.dec-block
+            +about()
+                .row.col.middle-xs
+                    .col-xs-12
+                        +main-title({
+                            title: 'Maroon'
+                        })
+                    .col-xs-12
+                        +description({
+                            text: 'Натуральная косметика для бережного ухода за кожей'
+                        })(class='vertical-gap-m')
+                    .col-xs-8
+                        +link({
+                            theme: 'rectangular',
+                            text: 'Подробнее'
+                        })
+            .row.between-xs
+                .col-lg-4.col-sm-5.col-xs-6
+                    +promo-card({
+                        picture:
+                            {
+                                path: 'content',
+                                image: 'main1',
+                                format: 'jpg',
+                                width: '330',
+                                height: '442',
+                                altText: 'Уход для лица',
+                                source: [
+                                    {
+                                        'media' : '(min-width: 1200px)',
+                                        'path': 'content',
+                                        'image': 'main1',
+                                        'format': 'webp'
+                                    },{
+                                        'media' : '(min-width: 1200px)',
+                                        'path': 'content',
+                                        'image': 'main1',
+                                        'format': 'jpg'
+                                    },{
+                                        'media' : '(min-width: 768px)',
+                                        'path': 'content',
+                                        'image': 'main1-lap',
+                                        'format': 'webp'
+                                    },{
+                                        'media' : '(min-width: 768px)',
+                                        'path': 'content',
+                                        'image': 'main1-lap',
+                                        'format': 'jpg'
+                                    },{
+                                        'path': 'content',
+                                        'image': 'main1-mob',
+                                        'format': 'webp'
+                                    },{
+                                        'path': 'content',
+                                        'image': 'main1-mob',
+                                        'format': 'jpg'
+                                    }
+                                ]
+                            },
+                        svg : {icoName: 'arrow'},
+                        href : '#',
+                        text : 'Уход для лица'
+                    })
+                .col-lg-4.col-sm-5.col-xs-6
+                    +promo-card({
+                        picture:
+                            {
+                                path: 'content',
+                                image: 'main1',
+                                format: 'jpg',
+                                width: '330',
+                                height: '442',
+                                altText: 'Уход для лица',
+                                source: [
+                                    {
+                                        'media' : '(min-width: 1200px)',
+                                        'path': 'content',
+                                        'image': 'main2',
+                                        'format': 'webp'
+                                    },{
+                                        'media' : '(min-width: 1200px)',
+                                        'path': 'content',
+                                        'image': 'main2',
+                                        'format': 'jpg'
+                                    },{
+                                        'media' : '(min-width: 768px)',
+                                        'path': 'content',
+                                        'image': 'main2-lap',
+                                        'format': 'webp'
+                                    },{
+                                        'media' : '(min-width: 768px)',
+                                        'path': 'content',
+                                        'image': 'main2-lap',
+                                        'format': 'jpg'
+                                    },{
+                                        'path': 'content',
+                                        'image': 'main2-mob',
+                                        'format': 'webp'
+                                    },{
+                                        'path': 'content',
+                                        'image': 'main2-mob',
+                                        'format': 'jpg'
+                                    }
+                                ]
+                            },
+                        svg : {icoName: 'arrow'},
+                        href : '#',
+                        text : 'Уход для тела'
+                    })

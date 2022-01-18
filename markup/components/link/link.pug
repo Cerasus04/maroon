@@ -1,2 +1,12 @@
 mixin link(params)
-    a.link(class=params.active ? 'active': '' href=params.href)&attributes(attributes) !{params.link}
+    - var theme = params.theme || 'simple';
+    - var text = params.text;
+
+    a(class=`link link--${theme}` aria-label=text href=params.href)&attributes(attributes) !{params.text}
+
+
+//- simple - обычная без границ
+    rectangular - ссылка в прямоугольнике
+    underline - подчеркнутая ссылка
+    decorative - декоративная ссылка
+

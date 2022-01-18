@@ -1,3 +1,52 @@
 .promo-card {
     color: $color-main-text;
 }
+
+.promo-card img {
+    background-color: $color-border;
+    display: block;
+    height: 422px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@include tablet {
+    .promo-card img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@include mobile {
+    // .promo-card img {
+    //     height: calc((50vw - 30px) / (130 / 170));
+    // }
+}
+
+.promo-card__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 0;
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    color: $color-main-text;
+    transition: 0.2s;
+}
+
+@include mobile {
+    .promo-card__text {
+        margin-top: 7px;
+        font-size: 12px;
+    }
+}
+
+.promo-card:active > .promo-card__text,
+.promo-card:focus > .promo-card__text,
+.promo-card:hover > .promo-card__text {
+    transition: 0.2s;
+    opacity: 0.5;
+}

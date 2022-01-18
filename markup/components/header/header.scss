@@ -1,6 +1,4 @@
 .header {
-    background-color: $color-default-white;
-    margin: 0 auto;
     position: fixed;
     top: 0;
     left: 0;
@@ -8,8 +6,11 @@
     z-index: 30;
     width: 100%;
     min-width: 320px;
-    padding: 40px 98px;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 40px 0;
     border-bottom: 1px solid $color-border;
+    background-color: $color-default-white;
     transition: 0.3s;
 }
 

@@ -2,13 +2,13 @@ mixin header()
     header.header.header--transparent
         .row.between-xs.middle-xs
             .col-collapse-lg.col-sm-1.col-xs-2
-                +burger()(class='outline')
-            .col-lg-2.col-sm-9.col-xs-6
-                +logo(logo.defaults)(class='outline')
+                +burger()
+            .col-lg-2.col-sm-8.col-xs-4.col-sm-offset-1.col-xs-offset-2.col-lg-offset-0
+                +logo(logo.defaults)
             .col-lg-9
                 .header__nav
                     +overlay()
                     +nav-list(nav.header)(class='nav-list--header')
                     +social(social.defaults)(class='social-list--for-menu')
-            .col-lg-1.col-sm-2.col-xs-3
-                +user-actions(user.defaults)(class='outline')
+            .col-lg-1.col-sm-2.col-xs-4
+                +user-actions(user.defaults)

@@ -1,9 +1,7 @@
 mixin button(params)
-    - var size = params.size || 'md';
+    - var size = params.size || 'small';
     - var theme = params.theme || 'primary';
     - var type = params.type || 'button';
     - var text = params.text;
-    - var ariaLabel = params.ariaLabel;
-
 
     button(class=`btn btn--${size} btn--${theme}` aria-label=text type=type)&attributes(attributes) #{text}

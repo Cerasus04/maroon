@@ -1,6 +1,7 @@
 /* Uncomment and set these variables to customize the grid. */
 
-.container-fluid {
+.container {
+    max-width: 1170px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 2rem;
@@ -38,7 +39,7 @@
     -webkit-box-direction: reverse;
     flex-direction: column-reverse;
 }
-.col {
+.row.col {
     -ms-flex-direction: column;
     -webkit-box-orient: vertical;
     flex-direction: column;

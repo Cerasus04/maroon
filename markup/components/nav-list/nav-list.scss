@@ -28,7 +28,7 @@
         width: 100%;
     }
     .nav-list__item:not(:first-child) {
-        margin-left: 20px;
+        margin-left: 19px;
     }
     .nav-list--header {
         flex-direction: column;
@@ -46,7 +46,6 @@
             font-weight: 500;
         }
     }
-
 }
 
 @include mobile {
@@ -54,6 +53,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 25px;
+        padding: 30px 0 40px;
 
         .nav-list__item {
             margin-left: 0;

@@ -48,28 +48,30 @@ function onEscPress(evt) {
 function isScrolled() {
   const pxAmount = 0
   const scrollTop = document.documentElement.scrollTop
-
+  console.log(scrollTop);
   return scrollTop > pxAmount
 }
 
 function setMenuHeight() {
   menu.removeAttribute(`style`)
-
   const deltaHeight = document.body.offsetHeight - header.offsetHeight
   const menuHeight = menu.offsetHeight
-
   if (deltaHeight < menuHeight) {
     menu.setAttribute(`style`, `height: ${deltaHeight}px`)
   }
 }
 
 if (menu) {
+
   window.addEventListener(`scroll`, function () {
-    if (isScrolled()) {
-      header.classList.add(`header--colored`)
-    } else {
-      header.classList.remove(`header--colored`)
-    }
+    console.log('сюда')
+
+
+    // if (isScrolled()) {
+    //   header.classList.add(`header--colored`)
+    // } else {
+    //   header.classList.remove(`header--colored`)
+    // }
   })
 
   closeHeaderMenu()

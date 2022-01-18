@@ -1,18 +1,20 @@
 mixin footer()
     footer.footer
-        .row.middle-xs.vertical-gap-lg-m
-            .col-lg-2.col-sm-3.col-xs-6
-                +logo(logo.defaults)(class='logo--footer')
-            .col-lg-8.col-sm-6.col-xs-8.outline
-                +nav-list(nav.footer)(class='nav-list--footer')
-            .col-lg-2.col-sm-3.col-xs-12
-                +social(social.defaults)(class='social-list--footer')
-        .row
-            .col-sm-12.col-xs-10
-                +copyright({
-                    text: 'Maroon Ⓒ 2020 Все права защищены',
-                    link: true,
-                    linkText: 'Политика конфиденциальности'
-                })
+        .container.devider
+            .row.middle-xs.vertical-gap-m
+                .col-lg-2.col-sm-3.col-xs-6
+                    +logo(logo.defaults)(class='logo--footer')
+                .col-lg-8.col-sm-6.col-xs-9
+                    +nav-list(nav.footer)(class='nav-list--footer')
+                .col-lg-2.col-sm-3.col-xs-12
+                    +social(social.defaults)(class='social-list--footer')
+        .container
+            .row
+                .col-sm-12.col-xs-10
+                    +copyright({
+                        text: 'Maroon Ⓒ 2020 Все права защищены',
+                        link: true,
+                        linkText: 'Политика конфиденциальности'
+                    })
 
 

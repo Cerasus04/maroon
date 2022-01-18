@@ -2,10 +2,9 @@ mixin content-img(params)
     img(class='img' src='%=static=%img/' + params.path + '/' + params.image + '@1x.' + params.format, srcset= '%=static=%img/' + params.path + '/' + params.image + '@2x.' + params.format + ' 2x', width=params.width, height= params.height, alt= params.altText aria-labelledby=params.labelleadbly)
 
 
-//-+img(
-    {
-        path: 'content', || assets/logo, если это картинка компонента
-        image: 'wards-people-1-dt',
+//-+content-img({
+        path: 'content',
+        image: 'card-lap',
         format: 'jpg',
         width: '343',
         height: '229',

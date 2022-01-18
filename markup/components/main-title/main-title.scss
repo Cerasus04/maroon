@@ -1,0 +1,25 @@
+.main-title {
+    margin: 47px 0 10px;
+    font-family: $font-secondary;
+    font-size: 58px;
+    font-weight: 500;
+    line-height: 68px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@include tablet {
+    .main-title {
+        margin: -10px 0 10px;
+        font-size: 54px;
+        line-height: 63px;
+    }
+}
+
+@include mobile {
+    .main-title {
+        margin: 0 0 5px;
+        font-size: 42px;
+        line-height: 49px;
+    }
+}

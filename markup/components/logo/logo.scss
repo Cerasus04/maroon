@@ -1,6 +1,6 @@
 .logo {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     outline: 0;
     transition: 0.2s;
 }
@@ -18,10 +18,15 @@
     width: 131px;
 }
 @include tablet {
-
+    .logo {
+        justify-content: center;
+    }
 }
 
 @include mobile  {
+    .logo--footer {
+        justify-content: flex-start;
+    }
     .logo img {
         height: 13px;
         width: 85px;

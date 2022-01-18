@@ -1,0 +1,41 @@
+// simple - обычная без границ
+// rectangular - ссылка в прямоугольнике
+// underline - подчеркнутая ссылка
+// decorative - подчеркнутая ссылка
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 27px;
+    font-family: $font-main;
+    font-size: 16px;
+    font-weight: 500;
+    color: $color-main-text;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.link--simple {
+    color: inherit;
+}
+.link--rectangular {
+    border: 1px solid $color-border-btn;
+    border-radius: 2px;
+}
+.link--underline {
+    border-bottom: 1px solid $color-border-btn;
+}
+
+.link:active,
+.link:focus,
+.link:hover {
+    opacity: 0.5;
+}
+
+@include mobile {
+    .button {
+        padding: 13px 27px;
+        font-size: 14px;
+    }
+}
