@@ -9,9 +9,12 @@ include ../components/link/link.pug
 include ../components/main-title/main-title.pug
 include ../components/title/title.pug
 include ../components/description/description.pug
+include ../components/title/title.pug
+include ../components/product-card/product-card.pug
+
 
 append section
-    +bg-img()(class='bg-img--about')
+    +bg-img()(class='bg-img--about vertical-gap-xl')
         .container.dec-block
             +about()
                 .row.col.middle-xs
@@ -33,6 +36,7 @@ append section
                     +promo-card({
                         picture:
                             {
+                                src: '%=static=%img/',
                                 path: 'content',
                                 image: 'main1',
                                 format: 'jpg',
@@ -42,32 +46,32 @@ append section
                                 source: [
                                     {
                                         'media' : '(min-width: 1200px)',
-                                        'path': 'content',
                                         'image': 'main1',
-                                        'format': 'webp'
+                                        'format': 'webp',
+                                        'type' : 'image/webp',
                                     },{
                                         'media' : '(min-width: 1200px)',
-                                        'path': 'content',
                                         'image': 'main1',
-                                        'format': 'jpg'
+                                        'format': 'jpg',
+                                        'type' : 'image/jpeg'
                                     },{
                                         'media' : '(min-width: 768px)',
-                                        'path': 'content',
                                         'image': 'main1-lap',
-                                        'format': 'webp'
+                                        'format': 'webp',
+                                        'type' : 'image/webp',
                                     },{
                                         'media' : '(min-width: 768px)',
-                                        'path': 'content',
                                         'image': 'main1-lap',
-                                        'format': 'jpg'
+                                        'format': 'jpg',
+                                        'type' : 'image/jpeg'
                                     },{
-                                        'path': 'content',
                                         'image': 'main1-mob',
-                                        'format': 'webp'
+                                        'format': 'webp',
+                                        'type' : 'image/webp',
                                     },{
-                                        'path': 'content',
                                         'image': 'main1-mob',
-                                        'format': 'jpg'
+                                        'format': 'jpg',
+                                        'type' : 'image/jpeg'
                                     }
                                 ]
                             },
@@ -79,6 +83,7 @@ append section
                     +promo-card({
                         picture:
                             {
+                                src: '%=static=%img/',
                                 path: 'content',
                                 image: 'main1',
                                 format: 'jpg',
@@ -88,32 +93,32 @@ append section
                                 source: [
                                     {
                                         'media' : '(min-width: 1200px)',
-                                        'path': 'content',
                                         'image': 'main2',
-                                        'format': 'webp'
+                                        'format': 'webp',
+                                        'type' : 'image/webp',
                                     },{
                                         'media' : '(min-width: 1200px)',
-                                        'path': 'content',
                                         'image': 'main2',
-                                        'format': 'jpg'
+                                        'format': 'jpg',
+                                        'type' : 'image/jpeg'
                                     },{
                                         'media' : '(min-width: 768px)',
-                                        'path': 'content',
                                         'image': 'main2-lap',
-                                        'format': 'webp'
+                                        'format': 'webp',
+                                        'type' : 'image/webp',
                                     },{
                                         'media' : '(min-width: 768px)',
-                                        'path': 'content',
                                         'image': 'main2-lap',
-                                        'format': 'jpg'
+                                        'format': 'jpg',
+                                        'type' : 'image/jpeg'
                                     },{
-                                        'path': 'content',
                                         'image': 'main2-mob',
-                                        'format': 'webp'
+                                        'format': 'webp',
+                                        'type' : 'image/webp',
                                     },{
-                                        'path': 'content',
                                         'image': 'main2-mob',
-                                        'format': 'jpg'
+                                        'format': 'jpg',
+                                        'type' : 'image/jpeg'
                                     }
                                 ]
                             },
@@ -121,3 +126,49 @@ append section
                         href : '#',
                         text : 'Уход для тела'
                     })
+    .container.vertical-gap-xl
+        .row
+            .col-lg-4
+                .row.col
+                    .col-lg-12.vertical-gap-s
+                        +title({
+                            title: 'Бестселлеры'
+                        })
+                    .col-lg-9.vertical-gap-m
+                        +description({
+                            text: 'Легендарные продукты, завоевавшие любовь наших клиентов'
+                        })
+                    .col-lg-7
+                        +link({
+                            theme: 'rectangular',
+                            text: 'Подробнее'
+                        })
+            .col-lg-8
+                .slider.swiper-container
+                    +product-card({
+                        src: '%=static=%img/content/',
+                        format: 'jpg',
+                        width: '230',
+                        height: '312',
+                        altText: 'Слайд с продукцией',
+                        link: 'Подробнее',
+                        slide: [
+                            {
+                                'image': 'cream-high',
+                                'title': 'High',
+                                'text' : 'крем для лица'
+                            },{
+                                'image': 'cream-rest',
+                                'title': 'Rest',
+                                'text' : 'минеральная пудра'
+                            },{
+                                'image': 'cream-rose',
+                                'title': 'Rose',
+                                'text' : 'крем для лица'
+                            },{
+                                'image': 'cream-milk',
+                                'title': 'Milk',
+                                'text' : 'масло для тела'
+                            }
+                        ]
+                    })(class='swiper-slide slider__item')
