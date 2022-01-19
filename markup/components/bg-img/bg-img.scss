@@ -4,6 +4,14 @@
     background-size: cover;
     background-color: $color-background-inner;
 }
+.bg-img--banner {
+    background-image: url('%=static=%assets/bg-img/spring@1x.jpg');
+    min-height: 400px;
+}
+.bg-img--history {
+    background-image: url('%=static=%assets/bg-img/history@1x.jpg');
+    min-height: 433px;
+}
 .bg-img--about {
     padding: 131px 0 64px;
     background-image: url('%=static=%assets/bg-img/main@1x.jpg');
@@ -13,12 +21,28 @@
     .bg-img--about {
         background-image: url('%=static=%assets/bg-img/main@2x.jpg');
     }
+    .bg-img--banner {
+        background-image: url('%=static=%assets/bg-img/spring@2x.jpg');
+    }
+    .bg-img--history {
+        background-image: url('%=static=%assets/bg-img/history@2x.jpg');
+    }
 }
 
-@media (max-width: 1199px) {
+@include tablet {
     .bg-img--about {
         padding-bottom: 66px;
         background-image: url('%=static=%assets/bg-img/main-lap@1x.jpg');
+    }
+    .bg-img--banner {
+        min-height: 432px;
+        background-position: left center;
+        background-image: url('%=static=%assets/bg-img/spring-lap@1x.jpg');
+    }
+    .bg-img--history {
+        min-height: 393px;
+        background-position: center bottom;
+        background-image: url('%=static=%assets/bg-img/history-lap@1x.jpg');
     }
 }
 
@@ -28,12 +52,28 @@
     .bg-img--about {
         background-image: url('%=static=%assets/bg-img/main-lap@2x.jpg');
     }
+    .bg-img--banner {
+        background-image: url('%=static=%assets/bg-img/spring-lap@2x.jpg');
+    }
+    .bg-img--history {
+        background-image: url('%=static=%assets/bg-img/history-lap@2x.jpg');
+    }
 }
 
-@media (max-width: 767px) {
+@include mobile {
     .bg-img--about {
         padding: 97px 0 55px;
         background-image: url('%=static=%assets/bg-img/main-mob@1x.jpg');
+    }
+    .bg-img--banner {
+        flex-direction: column;
+        min-height: 562px;
+        background-position: center;
+        background-image: url('%=static=%assets/bg-img/spring-mob@1x.jpg');
+    }
+    .bg-img--history {
+        min-height: 346px;
+        background-image: url('%=static=%assets/bg-img/history-mob@1x.jpg');
     }
 }
 
@@ -42,5 +82,8 @@
     (max-width: 767px) and (min-resolution: 1.5dppx) {
     .bg-img--about {
         background-image: url('%=static=%assets/bg-img/main-mob@2x.jpg');
+    }
+    .bg-img--banner {
+        background-image: url('%=static=%assets/bg-img/spring-mob@2x.jpg');
     }
 }

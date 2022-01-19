@@ -136,7 +136,7 @@ append section
                     text: 'Легендарные продукты, завоевавшие любовь наших клиентов',
                     theme: 'rectangular',
                     link: 'Подробнее'
-                })
+                })(class='vertical-twice-gap-m')
             .col-lg-9.col-sm-8.col-xs-12
                 .slider.swiper-container
                     .swiper-wrapper
@@ -173,3 +173,21 @@ append section
                         next: {'icoName': 'right',
                                 'size':'lg'}
                     })
+    +bg-img()(class='bg-img--banner vertical-gap-xl')
+        .container
+            .row
+                .col-lg-4.col-lg-offset-7.col-sm-6.col-sm-offset-6.col-xs-12
+                    +block-info({
+                        title: 'Встречайте весну вместе с нами',
+                        text: 'Попробуйте новую коллекцию ухаживающих средств для лица с SPF защитой',
+                        theme: 'rectangular',
+                        link: 'Подробнее'
+                    })(class='vertical-twice-gap-m block-info--banner')
+    +bg-img()(class='bg-img--history vertical-gap-xl')
+        .container
+            .row.col.center-xs.middle-xs.vertical-twice-gap-xl
+                .col-lg-8.col-xs-12
+                    +title({title: '“Мы стремимся сделать уход за кожей доступным и приятным ритуалом для всех, кто хочет заботиться о себе и своем теле”  '})(class='vertical-gap-s title--history')
+                .col-lg-3.col-sm-4.col-xs-8
+                    +link({theme: 'rectangular',link: 'Наша история'})
+

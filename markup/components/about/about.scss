@@ -13,6 +13,11 @@
     text-align: center;
   }
 
+  .about p {
+      @include word-break;
+      -webkit-line-clamp: 7;
+  }
+
   @media (max-width: 1199px) {
     .about {
       top: 28px;

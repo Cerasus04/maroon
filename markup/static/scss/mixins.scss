@@ -29,6 +29,15 @@
     text-justify: newspaper;
 }
 
+
+@mixin word-break {
+    display: -webkit-box;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+
 // You can add your own mixins here:
 
 @mixin retina {

@@ -5,9 +5,17 @@
 .block-info__btn {
     width: 80%;
 }
+.block-info p {
+    @include word-break;
+    -webkit-line-clamp: 3;
+}
 
 @include mobile {
     .block-info {
         align-items: center;
+        text-align: center;
+    }
+    .block-info--banner {
+        margin-top: 265px;
     }
 }

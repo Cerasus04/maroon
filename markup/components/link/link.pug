@@ -1,6 +1,6 @@
 mixin link(params)
     - var theme = params.theme || 'simple';
-    - var link = params.text;
+    - var link = params.link;
 
     a(class=`link link--${theme}` aria-label=link href=params.href)&attributes(attributes) !{params.link}
 
