@@ -11,6 +11,8 @@ include ../components/title/title.pug
 include ../components/description/description.pug
 include ../components/title/title.pug
 include ../components/product-card/product-card.pug
+include ../components/slider-btn/slider-btn.pug
+include ../components/block-info/block-info.pug
 
 
 append section
@@ -29,7 +31,7 @@ append section
                     .col-xs-8
                         +link({
                             theme: 'rectangular',
-                            text: 'Подробнее'
+                            link: 'Подробнее'
                         })
             .row.between-xs
                 .col-lg-4.col-sm-5.col-xs-6
@@ -128,47 +130,46 @@ append section
                     })
     .container.vertical-gap-xl
         .row
-            .col-lg-4
-                .row.col
-                    .col-lg-12.vertical-gap-s
-                        +title({
-                            title: 'Бестселлеры'
-                        })
-                    .col-lg-9.vertical-gap-m
-                        +description({
-                            text: 'Легендарные продукты, завоевавшие любовь наших клиентов'
-                        })
-                    .col-lg-7
-                        +link({
-                            theme: 'rectangular',
-                            text: 'Подробнее'
-                        })
-            .col-lg-8
+            .col-lg-3.col-sm-4.col-xs-12
+                +block-info({
+                    title: 'Бестселлеры',
+                    text: 'Легендарные продукты, завоевавшие любовь наших клиентов',
+                    theme: 'rectangular',
+                    link: 'Подробнее'
+                })
+            .col-lg-9.col-sm-8.col-xs-12
                 .slider.swiper-container
-                    +product-card({
-                        src: '%=static=%img/content/',
-                        format: 'jpg',
-                        width: '230',
-                        height: '312',
-                        altText: 'Слайд с продукцией',
-                        link: 'Подробнее',
-                        slide: [
-                            {
-                                'image': 'cream-high',
-                                'title': 'High',
-                                'text' : 'крем для лица'
-                            },{
-                                'image': 'cream-rest',
-                                'title': 'Rest',
-                                'text' : 'минеральная пудра'
-                            },{
-                                'image': 'cream-rose',
-                                'title': 'Rose',
-                                'text' : 'крем для лица'
-                            },{
-                                'image': 'cream-milk',
-                                'title': 'Milk',
-                                'text' : 'масло для тела'
-                            }
-                        ]
-                    })(class='swiper-slide slider__item')
+                    .swiper-wrapper
+                        +product-card({
+                            src: '%=static=%img/content/',
+                            format: 'jpg',
+                            width: '230',
+                            height: '312',
+                            altText: 'Слайд с продукцией',
+                            link: 'Подробнее',
+                            slide: [
+                                {
+                                    'image': 'cream-high',
+                                    'title': 'High',
+                                    'text' : 'крем для лица'
+                                },{
+                                    'image': 'cream-rest',
+                                    'title': 'Rest',
+                                    'text' : 'минеральная пудра'
+                                },{
+                                    'image': 'cream-rose',
+                                    'title': 'Rose',
+                                    'text' : 'крем для лица'
+                                },{
+                                    'image': 'cream-milk',
+                                    'title': 'Milk',
+                                    'text' : 'масло для тела'
+                                }
+                            ]
+                        })(class='swiper-slide slider__item')
+                    +slider-btn({
+                        prew: {'icoName': 'left',
+                                'size':'lg'},
+                        next: {'icoName': 'right',
+                                'size':'lg'}
+                    })

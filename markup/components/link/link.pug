@@ -1,8 +1,8 @@
 mixin link(params)
     - var theme = params.theme || 'simple';
-    - var text = params.text;
+    - var link = params.text;
 
-    a(class=`link link--${theme}` aria-label=text href=params.href)&attributes(attributes) !{params.text}
+    a(class=`link link--${theme}` aria-label=link href=params.href)&attributes(attributes) !{params.link}
 
 
 //- simple - обычная без границ

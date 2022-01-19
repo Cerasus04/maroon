@@ -1,0 +1,42 @@
+.slider-btns {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.slider-btns__btn {
+    position: static;
+    z-index: 0;
+    display: flex;
+    margin: 0;
+    transition: 0.2s;
+    cursor: pointer;
+    outline: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    color: $color-main-text;
+}
+
+.slider-btns__btn:active,
+.slider-btns__btn:focus,
+.slider-btns__btn:hover {
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.slider-btns__btn:not(:first-child) {
+    margin-left: 32px;
+}
+@include tablet {
+    .slider-btns {
+        margin-right: 45px;
+    }
+}
+
+@include mobile {
+    .slider-btns {
+        display: none;
+    }
+}

@@ -1,0 +1,13 @@
+.block-info {
+    display: flex;
+    flex-direction: column;
+}
+.block-info__btn {
+    width: 80%;
+}
+
+@include mobile {
+    .block-info {
+        align-items: center;
+    }
+}

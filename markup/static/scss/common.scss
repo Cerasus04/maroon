@@ -72,9 +72,12 @@ a {
     width: 230px;
 }
 
-@media (max-width: 767px) {
+@include mobile {
     .slider__item {
         height: 297px;
         width: 220px;
     }
-}
+    .slider {
+        width: 320px;
+    }
+  }

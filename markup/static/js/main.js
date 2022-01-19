@@ -85,8 +85,8 @@ if (slider) {
     init: false,
     loop: true,
     navigation: {
-      nextEl: `.slider__button_next`,
-      prevEl: `.slider__button_prev`,
+      nextEl: `.slider-btns__btn--next`,
+      prevEl: `.slider-btns__btn--prew`,
     },
     slidesPerView: 4,
     spaceBetween: 30,
