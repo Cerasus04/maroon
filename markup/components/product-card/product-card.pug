@@ -7,32 +7,4 @@ mixin product-card(params)
                 img(src=params.src + item.image + "@1x." + params.format, srcset= params.src + item.image + "@2x." + params.format + " 2x", width= params.width, height= params.height, alt= params.altText)
             h3.product-card__title #{item.title}
             p.product-card__description #{item.text}
-            a.product-card__link #{params.link}
-
-//- +product-card({
-//-     src: '%=static=%img/content',
-//-     format: 'jpg',
-//-     width: '230',
-//-     height: '312',
-//-     altText: 'Слайд с продукцией',
-//-     link: 'Подробнее',
-//-     slide: [
-//-         {
-//-             'image': 'cream-high',
-//-             'title': 'High',
-//-             'text' : 'крем для лица'
-//-         },{
-//-             'image': 'cream-rest',
-//-             'title': 'Rest',
-//-             'text' : 'минеральная пудра'
-//-         },{
-//-             'image': 'cream-rose',
-//-             'title': 'Rose',
-//-             'text' : 'крем для лица'
-//-         },{
-//-             'image': 'cream-milk',
-//-             'title': 'Milk',
-//-             'text' : 'масло для тела'
-//-         }
-//-     ]
-//- })(class='swiper-slide slider__item')
+            a.product-card__link(href=item.href) #{params.link}

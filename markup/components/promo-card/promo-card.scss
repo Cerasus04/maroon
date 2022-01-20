@@ -1,5 +1,6 @@
 .promo-card {
     color: $color-main-text;
+    outline: none;
 }
 
 .promo-card img {
@@ -16,12 +17,6 @@
         height: auto;
         width: 100%;
     }
-}
-
-@include mobile {
-    // .promo-card img {
-    //     height: calc((50vw - 30px) / (130 / 170));
-    // }
 }
 
 .promo-card__text {

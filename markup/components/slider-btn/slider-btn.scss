@@ -29,11 +29,6 @@
 .slider-btns__btn:not(:first-child) {
     margin-left: 32px;
 }
-@include tablet {
-    // .slider-btns {
-    //     margin-right: 45px;
-    // }
-}
 
 @include mobile {
     .slider-btns {

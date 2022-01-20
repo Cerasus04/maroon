@@ -6,7 +6,7 @@ data = {
             src: '%=static=%img/assets/logo/logo.png',
             width: '131',
             height: '21',
-            alt: 'Maroon'
+            altText: 'Maroon'
         }
     }
 }

@@ -33,7 +33,7 @@
 @mixin word-break {
     display: -webkit-box;
     word-wrap: break-word;
-    word-break: break-word;
+    // word-break: break-word;
     overflow: hidden;
     -webkit-box-orient: vertical;
 }

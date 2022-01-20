@@ -9,8 +9,9 @@
     min-height: 400px;
 }
 .bg-img--history {
+    background-position: bottom center;
     background-image: url('%=static=%assets/bg-img/history@1x.jpg');
-    min-height: 433px;
+    min-height: 300px;
 }
 .bg-img--about {
     padding: 131px 0 64px;
@@ -72,7 +73,7 @@
         background-image: url('%=static=%assets/bg-img/spring-mob@1x.jpg');
     }
     .bg-img--history {
-        min-height: 346px;
+        min-height: 315px;
         background-image: url('%=static=%assets/bg-img/history-mob@1x.jpg');
     }
 }

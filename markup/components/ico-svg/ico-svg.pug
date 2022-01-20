@@ -7,9 +7,3 @@ mixin ico-svg(params)
     svg(class=`ico-svg ico-svg--${size} ico-svg--${theme}`)&attributes(attributes)
         !='<!-- ico name: ' + params.icoName + '-->'
         path(fill='currentColor' d=icoNames[params.icoName])
-
-//-+ico-svg({
-        icoName: 'streaming',
-        size: 'lg',
-        theme: 'primary'
-    })

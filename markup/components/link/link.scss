@@ -27,7 +27,11 @@
 .link--underline {
     border-bottom: 1px solid $color-border-btn;
 }
-
+.link--history {
+    width: 80%;
+    max-width: 175px;
+    margin: 0 auto;
+}
 .link:active,
 .link:focus,
 .link:hover {
@@ -35,8 +39,12 @@
 }
 
 @include mobile {
-    .button {
+    .link {
         padding: 13px 27px;
         font-size: 14px;
+    }
+    .link--history {
+        width: unset;
+        max-width: unset;
     }
 }

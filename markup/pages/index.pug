@@ -17,438 +17,453 @@ include ../components/contacts/contacts.pug
 
 
 append section
-    +bg-img()(class='bg-img--about vertical-gap-xl')
-        .container.dec-block
-            +about()
-                .row.col.middle-xs
-                    .col-xs-12
-                        +main-title({
-                            title: 'Maroon'
+    main
+        +bg-img()(class='bg-img--about vertical-gap-xl')
+            .container.dec-block
+                +about()
+                    .row.col.middle-xs
+                        .col-xs-12
+                            +main-title({
+                                title: 'Maroon'
+                            })
+                        .col-xs-12
+                            +description({
+                                text: 'Натуральная косметика для бережного ухода за кожей'
+                            })(class='vertical-gap-m')
+                        .col-xs-8
+                            +link({
+                                theme: 'rectangular',
+                                link: 'Подробнее',
+                                href: '#'
+                            })
+                .row.between-xs
+                    .col-lg-4.col-sm-5.col-xs-6
+                        +promo-card({
+                            picture:
+                                {
+                                    src: '%=static=%img/',
+                                    path: 'content',
+                                    image: 'main1',
+                                    format: 'jpg',
+                                    width: '330',
+                                    height: '442',
+                                    altText: 'Уход для лица',
+                                    source: [
+                                        {
+                                            'media' : '(min-width: 1200px)',
+                                            'image': 'main1',
+                                            'format': 'webp',
+                                            'type' : 'image/webp',
+                                        },{
+                                            'media' : '(min-width: 1200px)',
+                                            'image': 'main1',
+                                            'format': 'jpg',
+                                            'type' : 'image/jpeg'
+                                        },{
+                                            'media' : '(min-width: 768px)',
+                                            'image': 'main1-lap',
+                                            'format': 'webp',
+                                            'type' : 'image/webp',
+                                        },{
+                                            'media' : '(min-width: 768px)',
+                                            'image': 'main1-lap',
+                                            'format': 'jpg',
+                                            'type' : 'image/jpeg'
+                                        },{
+                                            'image': 'main1-mob',
+                                            'format': 'webp',
+                                            'type' : 'image/webp',
+                                        },{
+                                            'image': 'main1-mob',
+                                            'format': 'jpg',
+                                            'type' : 'image/jpeg'
+                                        }
+                                    ]
+                                },
+                            svg : {icoName: 'arrow'},
+                            href : '#',
+                            text : 'Уход для лица'
                         })
-                    .col-xs-12
-                        +description({
-                            text: 'Натуральная косметика для бережного ухода за кожей'
-                        })(class='vertical-gap-m')
-                    .col-xs-8
+                    .col-lg-4.col-sm-5.col-xs-6
+                        +promo-card({
+                            picture:
+                                {
+                                    src: '%=static=%img/',
+                                    path: 'content',
+                                    image: 'main1',
+                                    format: 'jpg',
+                                    width: '330',
+                                    height: '442',
+                                    altText: 'Уход для лица',
+                                    source: [
+                                        {
+                                            'media' : '(min-width: 1200px)',
+                                            'image': 'main2',
+                                            'format': 'webp',
+                                            'type' : 'image/webp',
+                                        },{
+                                            'media' : '(min-width: 1200px)',
+                                            'image': 'main2',
+                                            'format': 'jpg',
+                                            'type' : 'image/jpeg'
+                                        },{
+                                            'media' : '(min-width: 768px)',
+                                            'image': 'main2-lap',
+                                            'format': 'webp',
+                                            'type' : 'image/webp',
+                                        },{
+                                            'media' : '(min-width: 768px)',
+                                            'image': 'main2-lap',
+                                            'format': 'jpg',
+                                            'type' : 'image/jpeg'
+                                        },{
+                                            'image': 'main2-mob',
+                                            'format': 'webp',
+                                            'type' : 'image/webp',
+                                        },{
+                                            'image': 'main2-mob',
+                                            'format': 'jpg',
+                                            'type' : 'image/jpeg'
+                                        }
+                                    ]
+                                },
+                            svg : {icoName: 'arrow'},
+                            href : '#',
+                            text : 'Уход для тела'
+                        })
+        .container.vertical-gap-xl
+            .row
+                .col-lg-3.col-sm-4.col-xs-12
+                    +block-info({
+                        title: 'Бестселлеры',
+                        text: 'Легендарные продукты, завоевавшие любовь наших клиентов',
+                        theme: 'rectangular',
+                        link: 'Подробнее',
+                        href: '#'
+                    })(class='vertical-twice-gap-m')
+                .col-lg-9.col-sm-8.col-xs-12
+                    .slider.swiper-container
+                        .swiper-wrapper
+                            +product-card({
+                                src: '%=static=%img/content/',
+                                format: 'jpg',
+                                width: '230',
+                                height: '312',
+                                altText: 'Слайд с продукцией',
+                                link: 'Подробнее',
+                                href: '#',
+                                slide: [
+                                    {
+                                        'image': 'cream-high',
+                                        'title': 'High',
+                                        'text' : 'крем для лица',
+                                        'href' : '#'
+                                    },{
+                                        'image': 'cream-rest',
+                                        'title': 'Rest',
+                                        'text' : 'минеральная пудра',
+                                        'href' : '#'
+                                    },{
+                                        'image': 'cream-rose',
+                                        'title': 'Rose',
+                                        'text' : 'крем для лица',
+                                        'href' : '#'
+                                    },{
+                                        'image': 'cream-milk',
+                                        'title': 'Milk',
+                                        'text' : 'масло для тела',
+                                        'href' : '#'
+                                    }
+                                ]
+                            })(class='swiper-slide slider__item')
+            +slider-btn({
+                prew: {'icoName': 'left',
+                        'size':'lg'},
+                next: {'icoName': 'right',
+                        'size':'lg'}
+            })
+        +bg-img()(class='bg-img--banner vertical-gap-xl')
+            .container
+                .row
+                    .col-lg-4.col-lg-offset-7.col-sm-6.col-sm-offset-6.col-xs-12.vertical-twice-gap-xl
+                        +block-info({
+                            title: 'Встречайте весну вместе с нами',
+                            text: 'Попробуйте новую коллекцию ухаживающих средств для лица с SPF защитой',
+                            theme: 'rectangular',
+                            link: 'Подробнее',
+                            href: '#'
+                        })(class='block-info--banner')
+        .container.vertical-gap-xl
+            .row.between-sm.center-xs
+                +bg-img()(class=' col-lg-8 col-sm-10 col-xs-11')
+                    .row.center-xs.start-sm
+                        .col-lg-6.col-sm-offset-1.col-sm-6.col-xs-12
+                            +block-info({
+                                title: 'Индивидуальный уход',
+                                text: 'Не всегда очевидно, какие элементы и минералы необходимы коже, а многочисленные эксперименты с разными средствами только ухудшают ее качество. <br> Заполните анкету, и мы подберем уход, подходящий именно вам, учитывая ваш образ жизни, место жительства и другие факторы. ',
+                                theme: 'rectangular',
+                                link: 'Подробнее',
+                                href: '#'
+                            })(class='vertical-twice-gap-xl block-info--individual')
+                .col-lg-7.col-sm-6.col-xs-10.dec-img.vertical-twice-gap-m
+                    +picture({
+                        src: '%=static=%img/',
+                        path: 'content',
+                        image: 'care',
+                        format: 'jpg',
+                        width: '670',
+                        height: '451',
+                        altText: 'Индивидуальный уход',
+                        source: [
+                            {
+                                'media' : '(max-width: 1199px)',
+                                'image': 'care-lap',
+                                'format': 'webp',
+                                'type' : 'image/webp'
+                            },{
+                                'media' : '(max-width: 1199px)',
+                                'image': 'care-lap',
+                                'format': 'jpg',
+                                'type' : 'image/jpeg'
+                            },{
+                                'media' : '(max-width: 767px)',
+                                'image': 'care-mob',
+                                'format': 'webp',
+                                'type' : 'image/webp'
+                            },{
+                                'media' : '(max-width: 767px)',
+                                'image': 'care-mob',
+                                'format': 'jpg',
+                                'type' : 'image/jpeg'
+                            },{
+                                'image': 'care',
+                                'format': 'webp',
+                                'type' : 'image/webp'
+                            },{
+                                'image': 'care',
+                                'format': 'jpg',
+                                'type' : 'image/jpeg'
+                            }
+                        ]
+                    })(class='picture picture--individual')
+
+        +bg-img()(class='bg-img--history vertical-gap-xl')
+            .container
+                .row.center-xs.middle-xs
+                    .col-lg-8.col-xs-12.vertical-twice-gap-m
+                        +title({title: '“Мы стремимся сделать уход за кожей доступным и приятным ритуалом для всех, кто хочет заботиться о себе и своем теле”  '})(class='vertical-gap-s title--history')
+                    .col-lg-3.col-sm-4.col-xs-8
                         +link({
                             theme: 'rectangular',
-                            link: 'Подробнее'
-                        })
-            .row.between-xs
-                .col-lg-4.col-sm-5.col-xs-6
-                    +promo-card({
-                        picture:
+                            link: 'Наша история',
+                            href: '#'
+                            })(class='link--history')
+        .container.vertical-gap-xl
+            .row.center-xs.start-sm
+                .col-sm-6.col-xs-8
+                    .row
+                        +picture(
                             {
                                 src: '%=static=%img/',
                                 path: 'content',
-                                image: 'main1',
+                                image: 'join1',
                                 format: 'jpg',
                                 width: '330',
                                 height: '442',
                                 altText: 'Уход для лица',
                                 source: [
                                     {
-                                        'media' : '(min-width: 1200px)',
-                                        'image': 'main1',
+                                        'image': 'join1',
                                         'format': 'webp',
-                                        'type' : 'image/webp',
+                                        'type' : 'image/webp'
                                     },{
-                                        'media' : '(min-width: 1200px)',
-                                        'image': 'main1',
+                                        'image': 'join1',
                                         'format': 'jpg',
                                         'type' : 'image/jpeg'
-                                    },{
-                                        'media' : '(min-width: 768px)',
-                                        'image': 'main1-lap',
-                                        'format': 'webp',
-                                        'type' : 'image/webp',
-                                    },{
-                                        'media' : '(min-width: 768px)',
-                                        'image': 'main1-lap',
-                                        'format': 'jpg',
-                                        'type' : 'image/jpeg'
-                                    },{
-                                        'image': 'main1-mob',
-                                        'format': 'webp',
-                                        'type' : 'image/webp',
-                                    },{
-                                        'image': 'main1-mob',
-                                        'format': 'jpg',
-                                        'type' : 'image/jpeg'
-                                    }
+                                    },
                                 ]
-                            },
-                        svg : {icoName: 'arrow'},
-                        href : '#',
-                        text : 'Уход для лица'
-                    })
-                .col-lg-4.col-sm-5.col-xs-6
-                    +promo-card({
-                        picture:
+                            })(class='picture picture--collage picture--collage-lg')
+                        +picture(
                             {
                                 src: '%=static=%img/',
                                 path: 'content',
-                                image: 'main1',
+                                image: 'join2',
                                 format: 'jpg',
                                 width: '330',
                                 height: '442',
                                 altText: 'Уход для лица',
                                 source: [
                                     {
-                                        'media' : '(min-width: 1200px)',
-                                        'image': 'main2',
+                                        'image': 'join2',
                                         'format': 'webp',
-                                        'type' : 'image/webp',
+                                        'type' : 'image/webp'
                                     },{
-                                        'media' : '(min-width: 1200px)',
-                                        'image': 'main2',
-                                        'format': 'jpg',
-                                        'type' : 'image/jpeg'
-                                    },{
-                                        'media' : '(min-width: 768px)',
-                                        'image': 'main2-lap',
-                                        'format': 'webp',
-                                        'type' : 'image/webp',
-                                    },{
-                                        'media' : '(min-width: 768px)',
-                                        'image': 'main2-lap',
-                                        'format': 'jpg',
-                                        'type' : 'image/jpeg'
-                                    },{
-                                        'image': 'main2-mob',
-                                        'format': 'webp',
-                                        'type' : 'image/webp',
-                                    },{
-                                        'image': 'main2-mob',
+                                        'image': 'join2',
                                         'format': 'jpg',
                                         'type' : 'image/jpeg'
                                     }
                                 ]
-                            },
-                        svg : {icoName: 'arrow'},
-                        href : '#',
-                        text : 'Уход для тела'
-                    })
-    .container.vertical-gap-xl
-        .row
-            .col-lg-3.col-sm-4.col-xs-12
-                +block-info({
-                    title: 'Бестселлеры',
-                    text: 'Легендарные продукты, завоевавшие любовь наших клиентов',
-                    theme: 'rectangular',
-                    link: 'Подробнее'
-                })(class='vertical-twice-gap-m')
-            .col-lg-9.col-sm-8.col-xs-12
-                .slider.swiper-container
-                    .swiper-wrapper
-                        +product-card({
-                            src: '%=static=%img/content/',
-                            format: 'jpg',
-                            width: '230',
-                            height: '312',
-                            altText: 'Слайд с продукцией',
-                            link: 'Подробнее',
-                            slide: [
-                                {
-                                    'image': 'cream-high',
-                                    'title': 'High',
-                                    'text' : 'крем для лица'
-                                },{
-                                    'image': 'cream-rest',
-                                    'title': 'Rest',
-                                    'text' : 'минеральная пудра'
-                                },{
-                                    'image': 'cream-rose',
-                                    'title': 'Rose',
-                                    'text' : 'крем для лица'
-                                },{
-                                    'image': 'cream-milk',
-                                    'title': 'Milk',
-                                    'text' : 'масло для тела'
-                                }
-                            ]
-                        })(class='swiper-slide slider__item')
-                    +slider-btn({
-                        prew: {'icoName': 'left',
-                                'size':'lg'},
-                        next: {'icoName': 'right',
-                                'size':'lg'}
-                    })
-    +bg-img()(class='bg-img--banner vertical-gap-xl')
-        .container
-            .row
-                .col-lg-4.col-lg-offset-7.col-sm-6.col-sm-offset-6.col-xs-12.vertical-twice-gap-m
+                            })(class='picture picture--collage')
+                        +picture(
+                            {
+                                src: '%=static=%img/',
+                                path: 'content',
+                                image: 'join3',
+                                format: 'jpg',
+                                width: '330',
+                                height: '442',
+                                altText: 'Уход для лица',
+                                source: [
+                                    {
+                                        'image': 'join3',
+                                        'format': 'webp',
+                                        'type' : 'image/webp'
+                                    },{
+                                        'image': 'join3',
+                                        'format': 'jpg',
+                                        'type' : 'image/jpeg'
+                                    }
+                                ]
+                            })(class='picture picture--collage')
+                    .row
+                        +picture(
+                            {
+                                src: '%=static=%img/',
+                                path: 'content',
+                                image: 'join4',
+                                format: 'jpg',
+                                width: '330',
+                                height: '442',
+                                altText: 'Уход для лица',
+                                source: [
+                                    {
+                                        'image': 'join4',
+                                        'format': 'webp',
+                                        'type' : 'image/webp'
+                                    },{
+                                        'image': 'join4',
+                                        'format': 'jpg',
+                                        'type' : 'image/jpeg'
+                                    }
+                                ]
+                            })(class='picture picture--collage picture--collage-lg')
+                        +picture(
+                            {
+                                src: '%=static=%img/',
+                                path: 'content',
+                                image: 'join5',
+                                format: 'jpg',
+                                width: '330',
+                                height: '442',
+                                altText: 'Уход для лица',
+                                source: [
+                                    {
+                                        'image': 'join5',
+                                        'format': 'webp',
+                                        'type' : 'image/webp'
+                                    },{
+                                        'image': 'join5',
+                                        'format': 'jpg',
+                                        'type' : 'image/jpeg'
+                                    }
+                                ]
+                            })(class='picture picture--collage')
+                        +picture(
+                            {
+                                src: '%=static=%img/',
+                                path: 'content',
+                                image: 'join6',
+                                format: 'jpg',
+                                width: '330',
+                                height: '442',
+                                altText: 'Уход для лица',
+                                source: [
+                                    {
+                                        'image': 'join6',
+                                        'format': 'webp',
+                                        'type' : 'image/webp'
+                                    },{
+                                        'image': 'join6',
+                                        'format': 'jpg',
+                                        'type' : 'image/jpeg'
+                                    }
+                                ]
+                            })(class='picture picture--collage')
+                .col-sm-5.col-sm-offset-1.col-xs-10.vertical-twice-gap-m
                     +block-info({
-                        title: 'Встречайте весну вместе с нами',
-                        text: 'Попробуйте новую коллекцию ухаживающих средств для лица с SPF защитой',
+                        title: 'Присоединяйтесь к нам',
+                        text: 'Подпишитесь на наш аккаунт @marooncare и узнавайте о новиках и акциях первыми',
                         theme: 'rectangular',
-                        link: 'Подробнее'
-                    })(class='block-info--banner')
-    .container
-        .row.between-sm.center-xs.vertical-gap-xl
-            +bg-img()(class=' col-lg-8 col-sm-10 col-xs-11')
-                .row.center-xs.start-sm
-                    .col-lg-6.col-sm-offset-1.col-sm-6.col-xs-12
-                        +block-info({
-                            title: 'Индивидуальный уход',
-                            text: 'Не всегда очевидно, какие элементы и минералы необходимы коже, а многочисленные эксперименты с разными средствами только ухудшают ее качество. <br> Заполните анкету, и мы подберем уход, подходящий именно вам, учитывая ваш образ жизни, место жительства и другие факторы. ',
-                            theme: 'rectangular',
-                            link: 'Подробнее'
-                        })(class='vertical-twice-gap-xl block-info--individual')
-            .col-lg-7.col-sm-6.col-xs-10.dec-img.vertical-twice-gap-m
-                +picture({
-                    src: '%=static=%img/',
-                    path: 'content',
-                    image: 'care',
-                    format: 'jpg',
-                    width: '670',
-                    height: '451',
-                    altText: 'Индивидуальный уход',
-                    source: [
-                        {
-                            'media' : '(max-width: 1199px)',
-                            'image': 'care-lap',
-                            'format': 'webp',
-                            'type' : 'image/webp'
-                        },{
-                            'media' : '(max-width: 1199px)',
-                            'image': 'care-lap',
-                            'format': 'jpg',
-                            'type' : 'image/jpeg'
-                        },{
-                            'media' : '(max-width: 767px)',
-                            'image': 'care-mob',
-                            'format': 'webp',
-                            'type' : 'image/webp'
-                        },{
-                            'media' : '(max-width: 767px)',
-                            'image': 'care-mob',
-                            'format': 'jpg',
-                            'type' : 'image/jpeg'
-                        },{
-                            'image': 'care',
-                            'format': 'webp',
-                            'type' : 'image/webp'
-                        },{
-                            'image': 'care',
-                            'format': 'jpg',
-                            'type' : 'image/jpeg'
-                        }
-                    ]
-                })(class='picture picture--individual')
+                        link: 'Подписаться',
+                        href: '#'
+                    })(class='block-info--follow')
+        .container.vertical-gap-xl
+            .row.between-sm.center-xs
+                +bg-img()(class='col-lg-8 col-sm-10 col-xs-11')
+                    .row.start-xs.vertical-twice-gap-xl
+                        .col-lg-6.col-sm-offset-1.col-sm-6.col-xs-12
+                            +title({title: 'Контакты'})(class='vertical-gap-s')
+                            +contacts({
+                                text: true,
+                                name: 'Адрес ',
+                                span: 'Санкт-Петербург <br> ул. Большая Конюшенная, 19',
+                                current: 'address'
+                            })(class='vertical-gap-m')
+                            +contacts({
+                                link: true,
+                                name: 'Телефон ',
+                                href: 'tel:+79238889060',
+                                linkText: '+7 (923) 888-90-60',
+                                current: 'tel'
+                            })(class='vertical-gap-m')
+                            +contacts({
+                                link: true,
+                                name: 'Пишите ',
+                                href: 'mailto:mail@htmlacademy.ru',
+                                linkText: 'mail@htmlacademy.ru',
+                                current: 'email'
+                            })(class='vertical-gap-m')
+                            +social(social.defaults)
 
-    +bg-img()(class='bg-img--history vertical-gap-xl')
-        .container
-            .row.col.center-xs.middle-xs.vertical-twice-gap-xl
-                .col-lg-8.col-xs-12
-                    +title({title: '“Мы стремимся сделать уход за кожей доступным и приятным ритуалом для всех, кто хочет заботиться о себе и своем теле”  '})(class='vertical-gap-s title--history')
-                .col-lg-3.col-sm-4.col-xs-8
-                    +link({theme: 'rectangular',link: 'Наша история'})
-    .container.vertical-gap-xl
-        .row.center-xs.start-sm
-            .col-sm-6.col-xs-8
-                .row
-                    +picture(
-                        {
-                            src: '%=static=%img/',
-                            path: 'content',
-                            image: 'join1',
-                            format: 'jpg',
-                            width: '330',
-                            height: '442',
-                            altText: 'Уход для лица',
-                            source: [
-                                {
-                                    'image': 'join1',
-                                    'format': 'webp',
-                                    'type' : 'image/webp'
-                                },{
-                                    'image': 'join1',
-                                    'format': 'jpg',
-                                    'type' : 'image/jpeg'
-                                },
-                            ]
-                        })(class='picture picture--collage picture--collage-lg')
-                    +picture(
-                        {
-                            src: '%=static=%img/',
-                            path: 'content',
-                            image: 'join2',
-                            format: 'jpg',
-                            width: '330',
-                            height: '442',
-                            altText: 'Уход для лица',
-                            source: [
-                                {
-                                    'image': 'join2',
-                                    'format': 'webp',
-                                    'type' : 'image/webp'
-                                },{
-                                    'image': 'join2',
-                                    'format': 'jpg',
-                                    'type' : 'image/jpeg'
-                                }
-                            ]
-                        })(class='picture picture--collage')
-                    +picture(
-                        {
-                            src: '%=static=%img/',
-                            path: 'content',
-                            image: 'join3',
-                            format: 'jpg',
-                            width: '330',
-                            height: '442',
-                            altText: 'Уход для лица',
-                            source: [
-                                {
-                                    'image': 'join3',
-                                    'format': 'webp',
-                                    'type' : 'image/webp'
-                                },{
-                                    'image': 'join3',
-                                    'format': 'jpg',
-                                    'type' : 'image/jpeg'
-                                }
-                            ]
-                        })(class='picture picture--collage')
-                .row
-                    +picture(
-                        {
-                            src: '%=static=%img/',
-                            path: 'content',
-                            image: 'join4',
-                            format: 'jpg',
-                            width: '330',
-                            height: '442',
-                            altText: 'Уход для лица',
-                            source: [
-                                {
-                                    'image': 'join4',
-                                    'format': 'webp',
-                                    'type' : 'image/webp'
-                                },{
-                                    'image': 'join4',
-                                    'format': 'jpg',
-                                    'type' : 'image/jpeg'
-                                }
-                            ]
-                        })(class='picture picture--collage picture--collage-lg')
-                    +picture(
-                        {
-                            src: '%=static=%img/',
-                            path: 'content',
-                            image: 'join5',
-                            format: 'jpg',
-                            width: '330',
-                            height: '442',
-                            altText: 'Уход для лица',
-                            source: [
-                                {
-                                    'image': 'join5',
-                                    'format': 'webp',
-                                    'type' : 'image/webp'
-                                },{
-                                    'image': 'join5',
-                                    'format': 'jpg',
-                                    'type' : 'image/jpeg'
-                                }
-                            ]
-                        })(class='picture picture--collage')
-                    +picture(
-                        {
-                            src: '%=static=%img/',
-                            path: 'content',
-                            image: 'join6',
-                            format: 'jpg',
-                            width: '330',
-                            height: '442',
-                            altText: 'Уход для лица',
-                            source: [
-                                {
-                                    'image': 'join6',
-                                    'format': 'webp',
-                                    'type' : 'image/webp'
-                                },{
-                                    'image': 'join6',
-                                    'format': 'jpg',
-                                    'type' : 'image/jpeg'
-                                }
-                            ]
-                        })(class='picture picture--collage')
-            .col-sm-5.col-sm-offset-1.col-xs-10.vertical-twice-gap-m
-                +block-info({
-                    title: 'Присоединяйтесь к нам',
-                    text: 'Подпишитесь на наш аккаунт @marooncare и узнавайте о новиках и акциях первыми',
-                    theme: 'rectangular',
-                    link: 'Подписаться'
-                })(class='block-info--follow')
-    .container
-        .row.between-sm.center-xs.vertical-gap-xl
-            +bg-img()(class='col-lg-8 col-sm-10 col-xs-11')
-                .row.start-xs.vertical-twice-gap-xl
-                    .col-lg-6.col-sm-offset-1.col-sm-6.col-xs-12
-                        +title({title: 'Контакты'})(class='vertical-gap-s')
-                        +contacts({
-                            text: true,
-                            name: 'Адрес ',
-                            span: 'Санкт-Петербург <br> ул. Большая Конюшенная, 19',
-                            current: 'address'
-                        })(class='vertical-gap-m')
-                        +contacts({
-                            link: true,
-                            name: 'Телефон ',
-                            href: 'tel:+79238889060',
-                            linkText: '+7 (923) 888-90-60',
-                            current: 'tel'
-                        })(class='vertical-gap-m')
-                        +contacts({
-                            link: true,
-                            name: 'Пишите ',
-                            href: 'mailto:mail@htmlacademy.ru',
-                            linkText: 'mail@htmlacademy.ru',
-                            current: 'email'
-                        })(class='vertical-gap-m')
-                        +social(social.defaults)
-
-            .col-lg-7.col-sm-6.col-xs-10.dec-img.vertical-twice-gap-m
-                +picture({
-                    src: '%=static=%img/',
-                    path: 'content',
-                    image: 'map',
-                    format: 'jpg',
-                    width: '670',
-                    height: '451',
-                    altText: 'Индивидуальный уход',
-                    source: [
-                        {
-                            'media' : '(max-width: 1199px)',
-                            'image': 'map-lap',
-                            'format': 'webp',
-                            'type' : 'image/webp'
-                        },{
-                            'media' : '(max-width: 1199px)',
-                            'image': 'map-lap',
-                            'format': 'jpg',
-                            'type' : 'image/jpeg'
-                        },{
-                            'media' : '(max-width: 767px)',
-                            'image': 'map-mob',
-                            'format': 'webp',
-                            'type' : 'image/webp'
-                        },{
-                            'media' : '(max-width: 767px)',
-                            'image': 'map-mob',
-                            'format': 'jpg',
-                            'type' : 'image/jpeg'
-                        },{
-                            'image': 'map',
-                            'format': 'webp',
-                            'type' : 'image/webp'
-                        },{
-                            'image': 'map',
-                            'format': 'jpg',
-                            'type' : 'image/jpeg'
-                        }
-                    ]
-                })(class='picture picture--individual')
+                .col-lg-7.col-sm-6.col-xs-10.dec-img.vertical-twice-gap-m
+                    +picture({
+                        src: '%=static=%img/',
+                        path: 'content',
+                        image: 'map',
+                        format: 'jpg',
+                        width: '670',
+                        height: '451',
+                        altText: 'Индивидуальный уход',
+                        source: [
+                            {
+                                'media' : '(max-width: 1199px)',
+                                'image': 'map-lap',
+                                'format': 'webp',
+                                'type' : 'image/webp'
+                            },{
+                                'media' : '(max-width: 1199px)',
+                                'image': 'map-lap',
+                                'format': 'jpg',
+                                'type' : 'image/jpeg'
+                            },{
+                                'media' : '(max-width: 767px)',
+                                'image': 'map-mob',
+                                'format': 'webp',
+                                'type' : 'image/webp'
+                            },{
+                                'media' : '(max-width: 767px)',
+                                'image': 'map-mob',
+                                'format': 'jpg',
+                                'type' : 'image/jpeg'
+                            },{
+                                'image': 'map',
+                                'format': 'webp',
+                                'type' : 'image/webp'
+                            },{
+                                'image': 'map',
+                                'format': 'jpg',
+                                'type' : 'image/jpeg'
+                            }
+                        ]
+                    })(class='picture picture--individual')
 
