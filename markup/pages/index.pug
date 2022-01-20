@@ -176,25 +176,25 @@ append section
     +bg-img()(class='bg-img--banner vertical-gap-xl')
         .container
             .row
-                .col-lg-4.col-lg-offset-7.col-sm-6.col-sm-offset-6.col-xs-12
+                .col-lg-4.col-lg-offset-7.col-sm-6.col-sm-offset-6.col-xs-12.vertical-twice-gap-m
                     +block-info({
                         title: 'Встречайте весну вместе с нами',
                         text: 'Попробуйте новую коллекцию ухаживающих средств для лица с SPF защитой',
                         theme: 'rectangular',
                         link: 'Подробнее'
-                    })(class='vertical-twice-gap-m block-info--banner')
+                    })(class='block-info--banner')
     .container
-        .row.between-lg.center-xs
-            +bg-img()(class='vertical-gap-xl col-lg-8 col-sm-12 col-xs-11')
+        .row.between-sm.center-xs.vertical-gap-xl
+            +bg-img()(class=' col-lg-8 col-sm-10 col-xs-11')
                 .row.center-xs.start-sm
-                    .col-lg-6.col-sm-offset-1.col-sm-5.col-xs-12
+                    .col-lg-6.col-sm-offset-1.col-sm-6.col-xs-12
                         +block-info({
                             title: 'Индивидуальный уход',
                             text: 'Не всегда очевидно, какие элементы и минералы необходимы коже, а многочисленные эксперименты с разными средствами только ухудшают ее качество. <br> Заполните анкету, и мы подберем уход, подходящий именно вам, учитывая ваш образ жизни, место жительства и другие факторы. ',
                             theme: 'rectangular',
                             link: 'Подробнее'
                         })(class='vertical-twice-gap-xl block-info--individual')
-            .col-lg-7.col-sm-7.col-xs-10.dec-img.vertical-twice-gap-m
+            .col-lg-7.col-sm-6.col-xs-10.dec-img.vertical-twice-gap-m
                 +picture({
                     src: '%=static=%img/',
                     path: 'content',
