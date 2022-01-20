@@ -9,6 +9,10 @@
     @include word-break;
     -webkit-line-clamp: 3;
 }
+.block-info--individual p {
+    @include word-break;
+    -webkit-line-clamp: 15;
+}
 
 @include mobile {
     .block-info {

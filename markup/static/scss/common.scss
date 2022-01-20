@@ -90,36 +90,21 @@ a {
 .devider {
     border-bottom: 1px solid $color-devider;
 }
-.absolute {
+.dec-position {
     position: absolute;
 
     &--right {
-        top: 0;
+        top: 68px;
         right: 0;
     }
 
     @include tablet {
-        top: 28px;
-        right: -100px;
+        right: -4%;
     }
 
     @include mobile {
+        position: relative;
+        top: -120px;
         right: 0;
-        left: 0;
     }
 }
-.absolute__img img{
-    height: 600px;
-    width: 670px;
-
-    @include tablet {
-        height: 510px;
-        width: 430px;
-    }
-
-    @include mobile {
-        width: 250px;
-        height: 252px;
-    }
-}
-

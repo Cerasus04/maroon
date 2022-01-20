@@ -184,59 +184,17 @@ append section
                         link: 'Подробнее'
                     })(class='vertical-twice-gap-m block-info--banner')
     .container
-        .row.dec-block
-            .col-lg-8.col-sm-12
-                +bg-img()(class='vertical-gap-xl')
-                    .row
-                        .col-lg-6.col-sm-offset-1.col-sm-6
-                            +block-info({
-                                title: 'Индивидуальный уход',
-                                text: 'Не всегда очевидно, какие элементы и минералы необходимы коже, а многочисленные эксперименты с разными средствами только ухудшают ее качество. <br> Заполните анкету, и мы подберем уход, подходящий именно вам, учитывая ваш образ жизни, место жительства и другие факторы. ',
-                                theme: 'rectangular',
-                                link: 'Подробнее'
-                            })(class='vertical-twice-gap-xl block-info--individual')
-            .col-lg-7.col-sm-8.absolute.absolute--right
-                +picture(
-                    {
-                        src: '%=static=%img/',
-                        path: 'content',
-                        image: 'main1',
-                        format: 'jpg',
-                        width: '451',
-                        height: '670',
-                        altText: 'Уход',
-                        source: [
-                            {
-                                'media' : '(min-width: 1200px)',
-                                'image': 'care',
-                                'format': 'webp',
-                                'type' : 'image/webp',
-                            },{
-                                'media' : '(min-width: 1200px)',
-                                'image': 'care',
-                                'format': 'jpg',
-                                'type' : 'image/jpeg'
-                            },{
-                                'media' : '(min-width: 768px)',
-                                'image': 'care-lap',
-                                'format': 'webp',
-                                'type' : 'image/webp',
-                            },{
-                                'media' : '(min-width: 768px)',
-                                'image': 'care-lap',
-                                'format': 'jpg',
-                                'type' : 'image/jpeg'
-                            },{
-                                'image': 'care-mob',
-                                'format': 'webp',
-                                'type' : 'image/webp',
-                            },{
-                                'image': 'care-mob',
-                                'format': 'jpg',
-                                'type' : 'image/jpeg'
-                            }
-                        ]
-                    })(class='absolute__img')
+        .row.center-xs
+            +bg-img()(class='vertical-gap-xl col-lg-8 col-sm-12 col-xs-11')
+                .row.center-xs.start-sm
+                    .col-lg-6.col-sm-offset-1.col-sm-6.col-xs-12
+                        +block-info({
+                            title: 'Индивидуальный уход',
+                            text: 'Не всегда очевидно, какие элементы и минералы необходимы коже, а многочисленные эксперименты с разными средствами только ухудшают ее качество. <br> Заполните анкету, и мы подберем уход, подходящий именно вам, учитывая ваш образ жизни, место жительства и другие факторы. ',
+                            theme: 'rectangular',
+                            link: 'Подробнее'
+                        })(class='vertical-twice-gap-xl block-info--individual')
+            +bg-img()(class='bg-img--individual vertical-gap-twice-m col-lg-7 col-sm-5 col-xs-10')
 
     +bg-img()(class='bg-img--history vertical-gap-xl')
         .container
