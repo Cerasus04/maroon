@@ -5,7 +5,7 @@
 .block-info__btn {
     width: 80%;
 }
-.block-info p {
+.block-info--banner p {
     @include word-break;
     -webkit-line-clamp: 3;
 }
