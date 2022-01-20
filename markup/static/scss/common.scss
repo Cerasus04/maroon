@@ -77,9 +77,6 @@ a {
         height: 297px;
         width: 220px;
     }
-    .slider {
-        width: 320px;
-    }
 }
 .outline {
     outline: 1px solid green;
@@ -90,21 +87,6 @@ a {
 .devider {
     border-bottom: 1px solid $color-devider;
 }
-.dec-position {
-    position: absolute;
-
-    &--right {
-        top: 68px;
-        right: 0;
-    }
-
-    @include tablet {
-        right: -4%;
-    }
-
-    @include mobile {
-        position: relative;
-        top: -120px;
-        right: 0;
-    }
+.dec-img {
+    margin-left: -42%;
 }
