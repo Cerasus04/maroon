@@ -236,8 +236,6 @@ append section
                     ]
                 })(class='picture picture--individual')
 
-            //- +bg-img()(class='bg-img--individual vertical-gap-twice-m col-lg-7 col-sm-5 col-xs-10')
-
     +bg-img()(class='bg-img--history vertical-gap-xl')
         .container
             .row.col.center-xs.middle-xs.vertical-twice-gap-xl
@@ -245,4 +243,143 @@ append section
                     +title({title: '“Мы стремимся сделать уход за кожей доступным и приятным ритуалом для всех, кто хочет заботиться о себе и своем теле”  '})(class='vertical-gap-s title--history')
                 .col-lg-3.col-sm-4.col-xs-8
                     +link({theme: 'rectangular',link: 'Наша история'})
+    .container.vertical-gap-xl
+        .row.center-xs.start-sm
+            .col-sm-6.col-xs-8
+                .row
+                    +picture(
+                        {
+                            src: '%=static=%img/',
+                            path: 'content',
+                            image: 'join1',
+                            format: 'jpg',
+                            width: '330',
+                            height: '442',
+                            altText: 'Уход для лица',
+                            source: [
+                                {
+                                    'image': 'join1',
+                                    'format': 'webp',
+                                    'type' : 'image/webp'
+                                },{
+                                    'image': 'join1',
+                                    'format': 'jpg',
+                                    'type' : 'image/jpeg'
+                                },
+                            ]
+                        })(class='picture picture--collage picture--collage-lg')
+                    +picture(
+                        {
+                            src: '%=static=%img/',
+                            path: 'content',
+                            image: 'join2',
+                            format: 'jpg',
+                            width: '330',
+                            height: '442',
+                            altText: 'Уход для лица',
+                            source: [
+                                {
+                                    'image': 'join2',
+                                    'format': 'webp',
+                                    'type' : 'image/webp'
+                                },{
+                                    'image': 'join2',
+                                    'format': 'jpg',
+                                    'type' : 'image/jpeg'
+                                }
+                            ]
+                        })(class='picture picture--collage')
+                    +picture(
+                        {
+                            src: '%=static=%img/',
+                            path: 'content',
+                            image: 'join3',
+                            format: 'jpg',
+                            width: '330',
+                            height: '442',
+                            altText: 'Уход для лица',
+                            source: [
+                                {
+                                    'image': 'join3',
+                                    'format': 'webp',
+                                    'type' : 'image/webp'
+                                },{
+                                    'image': 'join3',
+                                    'format': 'jpg',
+                                    'type' : 'image/jpeg'
+                                }
+                            ]
+                        })(class='picture picture--collage')
+                .row
+                    +picture(
+                        {
+                            src: '%=static=%img/',
+                            path: 'content',
+                            image: 'join4',
+                            format: 'jpg',
+                            width: '330',
+                            height: '442',
+                            altText: 'Уход для лица',
+                            source: [
+                                {
+                                    'image': 'join4',
+                                    'format': 'webp',
+                                    'type' : 'image/webp'
+                                },{
+                                    'image': 'join4',
+                                    'format': 'jpg',
+                                    'type' : 'image/jpeg'
+                                }
+                            ]
+                        })(class='picture picture--collage picture--collage-lg')
+                    +picture(
+                        {
+                            src: '%=static=%img/',
+                            path: 'content',
+                            image: 'join5',
+                            format: 'jpg',
+                            width: '330',
+                            height: '442',
+                            altText: 'Уход для лица',
+                            source: [
+                                {
+                                    'image': 'join5',
+                                    'format': 'webp',
+                                    'type' : 'image/webp'
+                                },{
+                                    'image': 'join5',
+                                    'format': 'jpg',
+                                    'type' : 'image/jpeg'
+                                }
+                            ]
+                        })(class='picture picture--collage')
+                    +picture(
+                        {
+                            src: '%=static=%img/',
+                            path: 'content',
+                            image: 'join6',
+                            format: 'jpg',
+                            width: '330',
+                            height: '442',
+                            altText: 'Уход для лица',
+                            source: [
+                                {
+                                    'image': 'join6',
+                                    'format': 'webp',
+                                    'type' : 'image/webp'
+                                },{
+                                    'image': 'join6',
+                                    'format': 'jpg',
+                                    'type' : 'image/jpeg'
+                                }
+                            ]
+                        })(class='picture picture--collage')
+            .col-sm-5.col-sm-offset-1.col-xs-10.vertical-twice-gap-m
+                +block-info({
+                    title: 'Присоединяйтесь к нам',
+                    text: 'Подпишитесь на наш аккаунт @marooncare и узнавайте о новиках и акциях первыми',
+                    theme: 'rectangular',
+                    link: 'Подписаться'
+                })(class='block-info--follow')
+
 

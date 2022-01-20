@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: column;
 }
-.block-info__btn {
-    width: 80%;
+.block-info .link {
+    width: 40%;
+    min-width: 160px;
 }
 .block-info--banner p {
     @include word-break;
