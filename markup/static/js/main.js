@@ -48,7 +48,6 @@ function onEscPress(evt) {
 function isScrolled() {
   const pxAmount = 0
   const scrollTop = document.documentElement.scrollTop
-  console.log(scrollTop);
   return scrollTop > pxAmount
 }
 
@@ -62,9 +61,16 @@ function setMenuHeight() {
 }
 
 if (menu) {
-  closeHeaderMenu()
-}
+    window.addEventListener(`scroll`, function () {
+      if (isScrolled()) {
+        header.classList.add(`header--colored`)
+      } else {
+        header.classList.remove(`header--colored`)
+      }
+    })
 
+    closeHeaderMenu()
+  }
 const slider = document.querySelector(`.swiper-container`)
 
 if (slider) {
