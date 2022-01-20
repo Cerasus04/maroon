@@ -62,18 +62,6 @@ function setMenuHeight() {
 }
 
 if (menu) {
-
-  window.addEventListener(`scroll`, function () {
-    console.log('сюда')
-
-
-    // if (isScrolled()) {
-    //   header.classList.add(`header--colored`)
-    // } else {
-    //   header.classList.remove(`header--colored`)
-    // }
-  })
-
   closeHeaderMenu()
 }
 

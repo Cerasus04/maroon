@@ -1,17 +1,7 @@
-//- mixin contacts(data)
-//-     .contacts-list
-//-         each item in data
-//-             p(class='contacts-list__text-wrapper contacts-list__text-wrapper--' + item.current)
-//-                 span.contacts-list__name #{item.name}
-//-                 if item.link
-//-                     a.contacts-list__value(href=item.href) #{item.linkText}
-//-                 if item.text
-//-                     span.contacts-list__value !{item.span}
-
-mixin contacts(data)
-    p(class='contacts-text contacts-text--' + data.current)
-        span.contacts-text__name #{data.name}
-        if data.link
-            a.contacts-text__value(href=data.href) #{data.linkText}
-        if data.text
-            span.contacts-text__value !{data.span}
+mixin contacts(params)
+    p(class='contacts-text contacts-text--' + params.current)&attributes(attributes)
+        span.contacts-text__name #{params.name}
+        if params.link
+            a.contacts-text__value(href=params.href) #{params.linkText}
+        if params.text
+            span.contacts-text__value !{params.span}

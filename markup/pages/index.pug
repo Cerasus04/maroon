@@ -13,6 +13,7 @@ include ../components/title/title.pug
 include ../components/product-card/product-card.pug
 include ../components/slider-btn/slider-btn.pug
 include ../components/block-info/block-info.pug
+include ../components/contacts/contacts.pug
 
 
 append section
@@ -381,5 +382,73 @@ append section
                     theme: 'rectangular',
                     link: 'Подписаться'
                 })(class='block-info--follow')
+    .container
+        .row.between-sm.center-xs.vertical-gap-xl
+            +bg-img()(class='col-lg-8 col-sm-10 col-xs-11')
+                .row.start-xs.vertical-twice-gap-xl
+                    .col-lg-6.col-sm-offset-1.col-sm-6.col-xs-12
+                        +title({title: 'Контакты'})(class='vertical-gap-s')
+                        +contacts({
+                            text: true,
+                            name: 'Адрес ',
+                            span: 'Санкт-Петербург <br> ул. Большая Конюшенная, 19',
+                            current: 'address'
+                        })(class='vertical-gap-m')
+                        +contacts({
+                            link: true,
+                            name: 'Телефон ',
+                            href: 'tel:+79238889060',
+                            linkText: '+7 (923) 888-90-60',
+                            current: 'tel'
+                        })(class='vertical-gap-m')
+                        +contacts({
+                            link: true,
+                            name: 'Пишите ',
+                            href: 'mailto:mail@htmlacademy.ru',
+                            linkText: 'mail@htmlacademy.ru',
+                            current: 'email'
+                        })(class='vertical-gap-m')
+                        +social(social.defaults)
 
+            .col-lg-7.col-sm-6.col-xs-10.dec-img.vertical-twice-gap-m
+                +picture({
+                    src: '%=static=%img/',
+                    path: 'content',
+                    image: 'map',
+                    format: 'jpg',
+                    width: '670',
+                    height: '451',
+                    altText: 'Индивидуальный уход',
+                    source: [
+                        {
+                            'media' : '(max-width: 1199px)',
+                            'image': 'map-lap',
+                            'format': 'webp',
+                            'type' : 'image/webp'
+                        },{
+                            'media' : '(max-width: 1199px)',
+                            'image': 'map-lap',
+                            'format': 'jpg',
+                            'type' : 'image/jpeg'
+                        },{
+                            'media' : '(max-width: 767px)',
+                            'image': 'map-mob',
+                            'format': 'webp',
+                            'type' : 'image/webp'
+                        },{
+                            'media' : '(max-width: 767px)',
+                            'image': 'map-mob',
+                            'format': 'jpg',
+                            'type' : 'image/jpeg'
+                        },{
+                            'image': 'map',
+                            'format': 'webp',
+                            'type' : 'image/webp'
+                        },{
+                            'image': 'map',
+                            'format': 'jpg',
+                            'type' : 'image/jpeg'
+                        }
+                    ]
+                })(class='picture picture--individual')
 
