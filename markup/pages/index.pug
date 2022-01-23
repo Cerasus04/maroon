@@ -14,6 +14,7 @@ include ../components/product-card/product-card.pug
 include ../components/slider-btn/slider-btn.pug
 include ../components/block-info/block-info.pug
 include ../components/contacts/contacts.pug
+include ../components/collage/collage.pug
 
 
 append section
@@ -260,8 +261,8 @@ append section
                             })(class='link--history')
         .container.vertical-gap-xl
             .row.center-xs.start-sm
-                .col-sm-6.col-xs-8
-                    .row
+                .col-sm-6.col-xs-12
+                    +collage()
                         +picture(
                             {
                                 src: '%=static=%img/',
@@ -325,7 +326,6 @@ append section
                                     }
                                 ]
                             })(class='picture picture--collage')
-                    .row
                         +picture(
                             {
                                 src: '%=static=%img/',
