@@ -72,6 +72,7 @@ if (menu) {
     closeHeaderMenu()
   }
 const slider = document.querySelector(`.swiper-container`)
+const sliderInner = document.querySelector(`.swiper-container.swiper-container--inner`)
 
 if (slider) {
   /* eslint-disable no-undef */
@@ -98,3 +99,29 @@ if (slider) {
   mySwiper.init()
   /* eslint-disable no-undef */
 }
+
+if (sliderInner) {
+    /* eslint-disable no-undef */
+    const mySwiper = new Swiper(`.swiper-container.swiper-container--inner`, {
+      init: false,
+      loop: true,
+      navigation: {
+        nextEl: `.slider-btns__btn--next`,
+        prevEl: `.slider-btns__btn--prew`,
+      },
+      slidesPerView: 4,
+      spaceBetween: 30,
+      updateOnWindowResize: true,
+      breakpoints: {
+        320: {
+          width: 970
+        },
+        768: {
+          width: 1010
+        }
+      }
+    })
+
+    mySwiper.init()
+    /* eslint-disable no-undef */
+  }

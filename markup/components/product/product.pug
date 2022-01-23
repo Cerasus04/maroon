@@ -1,0 +1,11 @@
+mixin product(params)
+    each item in params.slide
+        a.product__link(href='#')&attributes(attributes)
+            img(class='product__img' src='%=static=%img/' + params.path + '/' + item.image + '@1x.' + params.format, srcset= '%=static=%img/' + params.path + '/' + item.image + '@2x.' + params.format + ' 2x', width=params.width, height=params.height, alt=item.altText)
+            .product__wrapper
+                .product__text
+                    h3.product__title #{item.title}
+                    span.product__price #{item.price}
+                .product__text
+                    .product__descr-text #{item.text}
+                    .product__descr-volume #{item.volume}

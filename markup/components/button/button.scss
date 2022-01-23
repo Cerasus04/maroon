@@ -1,1 +1,31 @@
+.btn {
+    display: block;
+    vertical-align: top;
+    box-sizing: border-box;
+    background: 0 0;
+    text-decoration: none;
+    color: $color-main-text;
+    text-align: center;
+    cursor: pointer;
+    outline: 0;
+}
+.btn--small {
+    width: 12px;
+    height: 12px;
+}
+.btn--normal {
+    padding: 7px 25px 10px;
+    min-width: 141px;
+}
+.btn--primary {
+    margin-left: auto;
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    border: 1px solid $color-border-btn;
+    border-radius: 2px;
+}
+.btn--secondary {
 
+}

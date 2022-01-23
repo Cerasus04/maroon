@@ -1,7 +1,10 @@
 mixin button(params)
-    - var size = params.size || 'small';
+    - var size = params.size || 'normal';
     - var theme = params.theme || 'primary';
     - var type = params.type || 'button';
     - var text = params.text;
 
     button(class=`btn btn--${size} btn--${theme}` aria-label=text type=type)&attributes(attributes) #{text}
+
+
+//-size: small normal large, theme: primary, secondary

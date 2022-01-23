@@ -97,3 +97,12 @@ a {
         margin-top: -40px !important;
     }
 }
+.catalog-main {
+    flex-grow: 1;
+    margin-top: 100px;
+    background-color: $color-background;
+
+    @include mobile {
+        margin-top: 75px;
+    }
+}

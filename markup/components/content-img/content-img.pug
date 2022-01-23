@@ -1,2 +1,11 @@
 mixin content-img(params)
-    img(class='img' src='%=static=%img/' + params.path + '/' + params.image + '@1x.' + params.format, srcset= '%=static=%img/' + params.path + '/' + params.image + '@2x.' + params.format + ' 2x', width=params.width, height= params.height, alt= params.altText aria-labelledby=params.labelleadbly)
+
+    - var path = params.path;
+    - var image =  params.image;
+    - var format = params.format;
+    - var width = params.width;
+    - var height = params.height;
+    - var altText = params.altText;
+    - var labelleadbly = params.labelleadbly;
+
+    img(class='img' src='%=static=%img/' + path + '/' + image + '@1x.' + format, srcset= '%=static=%img/' + path + '/' + image + '@2x.' + format + ' 2x', width=width, height=height, alt=altText aria-labelledby=labelleadbly)
