@@ -1,0 +1,94 @@
+mixin input(params)
+    - var labelClass = params.labelClass || false;
+    - var inputClass = params.inputClass || false;
+    - var labelText = params.labelText;
+    - var fieldId =params.fieldId;
+    - var inputType = params.inputType;
+    - var name = params.name;
+    - var value = params.value || false;
+    - var pattern = params.pattern || false;
+    - var inputmode = params.inputmode || false;
+    - var placeholder = params.placeholder || false;
+    - var required = params.required || false;
+    - var checked = params.checked || false;
+
+    !='<!-- input-for: ' + labelText + '-->'
+    label(class=labelClass for=fieldId) !{labelText}
+    input(class=inputClass type=inputType id=fieldId name=name value=value pattern=pattern inputmode=inputmode placeholder=placeholder required=required checked=checked)
+
+//-+input({
+          labelClass: false,
+          labelText: 'Сумма пожертвования',
+          fieldId: 'donation',
+          inputType: 'number',
+          name: 'donation',
+          value: false,
+          pattern: '[0-9]*',
+          inputmode: 'numeric',
+          placeholder: '1 980 ₽ в месяц',
+          required: true
+        })
+        +input({
+          labelClass: false,
+          labelText: 'Номер карты <span>*</span>',
+          fieldId: 'card-number',
+          inputType: 'number',
+          name: 'card-number',
+          value: false,
+          pattern: '[0-9]*',
+          inputmode: 'numeric',
+          placeholder: false,
+          required: true
+        })
+         +input({
+          labelClass: false,
+          labelText: 'Имя, фамилия (латиница) <span>*</span>',
+          fieldId: 'full-name,
+          inputType: 'text',
+          name: 'full-name',
+          value: false,
+          pattern: 'false',
+          inputmode: 'text',
+          placeholder: false,
+          required: true
+        })
+        +input({
+          labelClass: false,
+          labelText: 'Срок действия <span>*</span>',
+          fieldId: 'expirationdate,
+          inputType: 'number',
+          name: 'expirationdate',
+          value: false,
+          pattern: '[0-9]*',
+          inputmode: 'numeric',
+          placeholder: '__/____',
+          required: true
+        })
+        +input({
+          labelClass: false,
+          labelText: 'CVV-код <span>*</span>',
+          fieldId: 'security-code',
+          inputType: 'number',
+          name: 'security-code',
+          value: false,
+          pattern: '[0-9]*',
+          inputmode: 'numeric',
+          placeholder: false,
+          required: true
+        })
+        +input({
+          labelClass: false,
+          labelText: 'E-mail для отчетов <span>*</span>',
+          fieldId: 'e-mail',
+          inputType: 'e-mail',
+          name: 'security-code',
+          value: false,
+          pattern: false,
+          inputmode: 'email',
+          placeholder: false,
+          required: true
+        })
+        +button({
+          buttonType: 'submit',
+          buttonText:'Оформить подписку'
+        })

@@ -1,0 +1,52 @@
+mixin checkbox-list(params)
+    ul.checkbox-list
+        each item in params.checkbox
+            li.checkbox-list__item
+                - var labelClass = params.labelClass || false;
+                - var labelText = item.labelText;
+                - var fieldId =item.dif && params.fieldId + '-' + item.dif;
+                - var name = params.name;
+                - var value = item.value || false;
+                - var checked = item.checked || false;
+
+                !='<!-- input-for: ' + labelText + '-->'
+                label(class=labelClass for=fieldId) !{labelText}
+                input(class='юvisually-hidden' type='checkbox' id=fieldId name=params.name value=value checked=checked)
+
+
+//-+checkbox-list({
+    labelClass : 'checkbox-list__label',
+    fieldId : 'filter-face-care',
+    name : 'face-care',
+    checkbox : [
+        {
+            labelText : 'Крема',
+            dif : '0',
+            value : 'cream',
+            checked : true
+        },{
+            labelText : 'Сыворотки',
+            dif : '1',
+            value : 'serum',
+            checked : true
+        },{
+            labelText : 'Маски',
+            dif : '2',
+            value : 'mask',
+            checked : true
+        },{
+            labelText : 'Пенки',
+            dif : '3',
+            value : 'foam',
+        },{
+            labelText : 'Тоники',
+            dif : '4',
+            value : 'tonic',
+        },{
+            labelText : 'Пудры',
+            dif : '5',
+            value : 'powder',
+            checked : true
+        }
+    ]
+    })

@@ -1,0 +1,9 @@
+mixin accordion(params)
+    .accordion&attributes(attributes)
+        .accordion__header
+            h3.accordion__subtitle #{params.subtitle}
+            +button(params.btn)(class='accordion__toggler')
+                span.accordion__togler-icon
+        .accordion__content
+            block
+
