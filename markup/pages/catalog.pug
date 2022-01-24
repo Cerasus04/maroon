@@ -17,11 +17,11 @@ include ../components/contacts/contacts.pug
 include ../components/collage/collage.pug
 include ../components/button/button.pug
 include ../components/product/product.pug
-
+include ../components/paginator/paginator.pug
 
 append section
     main.catalog-main
-        .container.vertical-gap-xl
+        .container
             .row.between-xs.vertical-twice-gap-m
                 .col-lg-2.col-sm-3.col-xs-5
                     +title({
@@ -31,7 +31,7 @@ append section
                     +button({
                         text: 'Фильтр'
                     })
-        .container.vertical-gap-xl
+        .container.vertical-gap-xl.dec-block
             .slider.swiper-container.swiper-container--inner
                         .swiper-wrapper
                             +product({
@@ -124,6 +124,258 @@ append section
                                         'text' : 'ванны',
                                         'volume' : '20ml',
                                         'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'high',
+                                        'title': 'High',
+                                        'price' : '990 ₽',
+                                        'text' : 'крем для лица',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'rest',
+                                        'title': 'Rest',
+                                        'price' : '690 ₽',
+                                        'text' : 'минеральная пудра',
+                                        'volume' : '20g',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'rose',
+                                        'title': 'Rose',
+                                        'price' : '890 ₽',
+                                        'text' : 'крем для лица',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'milk',
+                                        'title': 'Milk',
+                                        'price' : '790 ₽',
+                                        'text' : 'масло для тела',
+                                        'volume' : '150ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'paradise',
+                                        'title': 'Paradise',
+                                        'price' : '590 ₽',
+                                        'text' : 'минеральная пудра',
+                                        'volume' : '15g',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'sun',
+                                        'title': 'Sun',
+                                        'price' : '90 ₽',
+                                        'text' : 'бомбочка для ванны',
+                                        'volume' : '20g',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'violet',
+                                        'title': 'Violet',
+                                        'price' : '890 ₽',
+                                        'text' : 'крем для лица',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'clean',
+                                        'title': 'Clean',
+                                        'price' : '490 ₽',
+                                        'text' : 'для',
+                                        'volume' : '100ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'coconut',
+                                        'title': 'Coconut',
+                                        'price' : '990 ₽',
+                                        'text' : 'масло для тела',
+                                        'volume' : '300ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'Lavender',
+                                        'title': 'lavender',
+                                        'price' : '290 ₽',
+                                        'text' : 'мыло ручной работы',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'lotos',
+                                        'title': 'Lotos',
+                                        'price' : '890 ₽',
+                                        'text' : 'мыло ручной работы',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'earth',
+                                        'title': 'Earth',
+                                        'price' : '90 ₽',
+                                        'text' : 'ванны',
+                                        'volume' : '20ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },    {
+                                        'image': 'high',
+                                        'title': 'High',
+                                        'price' : '990 ₽',
+                                        'text' : 'крем для лица',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'rest',
+                                        'title': 'Rest',
+                                        'price' : '690 ₽',
+                                        'text' : 'минеральная пудра',
+                                        'volume' : '20g',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'rose',
+                                        'title': 'Rose',
+                                        'price' : '890 ₽',
+                                        'text' : 'крем для лица',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'milk',
+                                        'title': 'Milk',
+                                        'price' : '790 ₽',
+                                        'text' : 'масло для тела',
+                                        'volume' : '150ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'paradise',
+                                        'title': 'Paradise',
+                                        'price' : '590 ₽',
+                                        'text' : 'минеральная пудра',
+                                        'volume' : '15g',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'sun',
+                                        'title': 'Sun',
+                                        'price' : '90 ₽',
+                                        'text' : 'бомбочка для ванны',
+                                        'volume' : '20g',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'violet',
+                                        'title': 'Violet',
+                                        'price' : '890 ₽',
+                                        'text' : 'крем для лица',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'clean',
+                                        'title': 'Clean',
+                                        'price' : '490 ₽',
+                                        'text' : 'для',
+                                        'volume' : '100ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'coconut',
+                                        'title': 'Coconut',
+                                        'price' : '990 ₽',
+                                        'text' : 'масло для тела',
+                                        'volume' : '300ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'Lavender',
+                                        'title': 'lavender',
+                                        'price' : '290 ₽',
+                                        'text' : 'мыло ручной работы',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'lotos',
+                                        'title': 'Lotos',
+                                        'price' : '890 ₽',
+                                        'text' : 'мыло ручной работы',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'earth',
+                                        'title': 'Earth',
+                                        'price' : '90 ₽',
+                                        'text' : 'ванны',
+                                        'volume' : '20ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'high',
+                                        'title': 'High',
+                                        'price' : '990 ₽',
+                                        'text' : 'крем для лица',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'rest',
+                                        'title': 'Rest',
+                                        'price' : '690 ₽',
+                                        'text' : 'минеральная пудра',
+                                        'volume' : '20g',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'rose',
+                                        'title': 'Rose',
+                                        'price' : '890 ₽',
+                                        'text' : 'крем для лица',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'milk',
+                                        'title': 'Milk',
+                                        'price' : '790 ₽',
+                                        'text' : 'масло для тела',
+                                        'volume' : '150ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'paradise',
+                                        'title': 'Paradise',
+                                        'price' : '590 ₽',
+                                        'text' : 'минеральная пудра',
+                                        'volume' : '15g',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'sun',
+                                        'title': 'Sun',
+                                        'price' : '90 ₽',
+                                        'text' : 'бомбочка для ванны',
+                                        'volume' : '20g',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'violet',
+                                        'title': 'Violet',
+                                        'price' : '890 ₽',
+                                        'text' : 'крем для лица',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'clean',
+                                        'title': 'Clean',
+                                        'price' : '490 ₽',
+                                        'text' : 'для',
+                                        'volume' : '100ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'coconut',
+                                        'title': 'Coconut',
+                                        'price' : '990 ₽',
+                                        'text' : 'масло для тела',
+                                        'volume' : '300ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'Lavender',
+                                        'title': 'lavender',
+                                        'price' : '290 ₽',
+                                        'text' : 'мыло ручной работы',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'lotos',
+                                        'title': 'Lotos',
+                                        'price' : '890 ₽',
+                                        'text' : 'мыло ручной работы',
+                                        'volume' : '50ml',
+                                        'altText': 'Слайд с продукцией каталога',
+                                    },{
+                                        'image': 'earth',
+                                        'title': 'Earth',
+                                        'price' : '90 ₽',
+                                        'text' : 'ванны',
+                                        'volume' : '20ml',
+                                        'altText': 'Слайд с продукцией каталога',
                                     },
                                 ]
                             })(class='swiper-slide slider__item')
@@ -133,4 +385,5 @@ append section
                 next: {'icoName': 'right',
                         'size':'lg'}
             })
+            +paginator()(class='swiper-pagination')
 

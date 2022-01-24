@@ -105,21 +105,37 @@ if (sliderInner) {
     const mySwiper = new Swiper(`.swiper-container.swiper-container--inner`, {
       init: false,
       loop: true,
+      slidesPerColumnFill:"row",
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerColumn: 12,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerColumn: 6,
+          slidesPerGroup: 2,
+        },
+        1366: {
+            slidesPerView: 4,
+            slidesPerColumn: 3,
+            slidesPerGroup: 4,
+        }
+      },
       navigation: {
         nextEl: `.slider-btns__btn--next`,
         prevEl: `.slider-btns__btn--prew`,
       },
-      slidesPerView: 4,
-      spaceBetween: 30,
-      updateOnWindowResize: true,
-      breakpoints: {
-        320: {
-          width: 970
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + '  ——  ' + '<span class="' + totalClass + '"></span>';
         },
-        768: {
-          width: 1010
-        }
-      }
+      },
+      spaceBetween: 10,
+
     })
 
     mySwiper.init()
