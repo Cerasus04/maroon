@@ -1,24 +1,22 @@
 .btn {
     display: block;
-    vertical-align: top;
     box-sizing: border-box;
     background: 0 0;
-    text-decoration: none;
+    border: none;
     color: $color-main-text;
     text-align: center;
     cursor: pointer;
     outline: 0;
 }
 .btn--small {
-    width: 12px;
-    height: 12px;
+    width: 18px;
+    height: 18px;
 }
 .btn--normal {
     padding: 7px 25px 10px;
     min-width: 141px;
 }
 .btn--primary {
-    margin-left: auto;
     font-family: $font-main;
     font-size: 16px;
     line-height: 20px;
@@ -26,6 +24,62 @@
     border: 1px solid $color-border-btn;
     border-radius: 2px;
 }
-.btn--secondary {
 
+.btn:focus,
+.btn:hover {
+    border: 1px solid $color-main-text;
+}
+.btn:active {
+    border: 1px solid $color-border-btn;
+}
+.btn:not(:last-child) {
+    margin-right: 20px;
+}
+.btn--filter {
+    display: none;
+}
+.btn--filter.active,
+.btn--close.active {
+    display: block;
+    margin-left: auto;
+}
+.btn--close {
+    display: none;
+    background: 0 0;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+
+    &::before {
+        background: $color-main-text;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 25px;
+        height: 2px;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+        background: $color-main-text;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 25px;
+        height: 2px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:focus,
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 1;
+    }
 }

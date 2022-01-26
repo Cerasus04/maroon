@@ -1,0 +1,39 @@
+.checkbox-list {
+    @include nl;
+}
+.checkbox-list__label {
+    position: relative;
+    padding-left: 22px;
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-light-text;
+    cursor: pointer;
+}
+
+.checkbox-list__label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid $color-devider;
+    border-radius: 50%;
+}
+
+input:checked + .checkbox-list__label {
+    color: $color-main-text;
+}
+
+input:checked + .checkbox-list__label::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    background-color: $color-main-text;
+    border: 1px solid $color-main-text;
+    border-radius: 50%;
+}
