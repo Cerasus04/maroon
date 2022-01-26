@@ -141,3 +141,39 @@ if (sliderInner) {
     mySwiper.init()
     /* eslint-disable no-undef */
   }
+
+  // Filter open
+
+  const filterBtn = document.querySelector('.btn--filter')
+  const closeBtn = document.querySelector('.btn--close')
+  const filter = document.querySelector('.filter')
+
+  function openFilter() {
+    filterBtn.classList.remove('active')
+    closeBtn.classList.add('active')
+    filter.classList.add('filter--open')
+  }
+  function closeFilter() {
+    closeBtn.classList.remove('active')
+    filterBtn.classList.add('active')
+    filter.classList.remove('filter--open')
+  }
+
+  filterBtn.addEventListener(`click`, openFilter)
+  closeBtn.addEventListener(`click`, closeFilter)
+
+  // Accordion
+
+  function toggleAccordion(element) {
+    element.classList.toggle(`accordion--closed`)
+  }
+
+  function onAccorderonTogglerClick(evt) {
+    const accordionElement = evt.currentTarget.closest(`.accordion`)
+    toggleAccordion(accordionElement)
+  }
+  const toggler = document.querySelectorAll(`.accordion__toggler`)
+
+  for (let i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener(`click`, onAccorderonTogglerClick)
+  }

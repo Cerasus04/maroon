@@ -108,7 +108,10 @@ a {
 }
 
 .filter {
-    padding-top: 18px;
+    display: none;
+}
+.filter--open {
+    display: block;
 }
 
 .filter__inner {
