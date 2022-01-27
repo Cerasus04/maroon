@@ -1,0 +1,86 @@
+extends _template.pug
+
+include ../components/content-img/content-img.pug
+include ../components/promo-card/promo-card.pug
+include ../components/about/about.pug
+include ../components/picture/picture.pug
+include ../components/bg-img/bg-img.pug
+include ../components/link/link.pug
+include ../components/main-title/main-title.pug
+include ../components/title/title.pug
+include ../components/description/description.pug
+include ../components/title/title.pug
+include ../components/product-card/product-card.pug
+include ../components/slider-btn/slider-btn.pug
+include ../components/block-info/block-info.pug
+include ../components/contacts/contacts.pug
+include ../components/collage/collage.pug
+include ../components/button/button.pug
+include ../components/product/product.pug
+include ../components/paginator/paginator.pug
+include ../components/form/form.pug
+include ../components/input/input.pug
+include ../components/checkbox-list/checkbox-list.pug
+include ../components/accordion/accordion.pug
+include ../components/contacts/contacts.pug
+include ../components/collage/collage.pug
+include ../components/site-contact/site-contact.pug
+include ../components/site-follow/site-follow.pug
+
+append section
+    main.main-inner
+        h1.visually-hidden Карточка товара
+        .container.vertical-gap-xl.dec-block
+            .row.center-xs.middle-xs
+                .col-xs-12
+                    +title({
+                        title: 'Вы недавно смотрели'
+                    })(class='vertical-gap-s')
+            .slider.swiper-container.swiper-container--viewed
+                .swiper-wrapper
+                    +product({
+                        path: 'assets/product',
+                        format: 'jpg',
+                        width: '270',
+                        height: '350',
+                        slide: [
+                            {
+                                'image': 'rose',
+                                'title': 'Rose',
+                                'price' : '890 ₽',
+                                'text' : 'крем для лица',
+                                'volume' : '50ml',
+                                'altText': 'Слайд с продукцией каталога',
+                            },{
+                                'image': 'milk',
+                                'title': 'Milk',
+                                'price' : '790 ₽',
+                                'text' : 'масло для тела',
+                                'volume' : '150ml',
+                                'altText': 'Слайд с продукцией каталога',
+                            },{
+                                'image': 'paradise',
+                                'title': 'Paradise',
+                                'price' : '590 ₽',
+                                'text' : 'минеральная пудра',
+                                'volume' : '15g',
+                                'altText': 'Слайд с продукцией каталога',
+                            },{
+                                'image': 'sun',
+                                'title': 'Sun',
+                                'price' : '90 ₽',
+                                'text' : 'бомбочка для ванны',
+                                'volume' : '20g',
+                                'altText': 'Слайд с продукцией каталога',
+                            }
+                        ]
+                    })(class='swiper-slide slider__item')
+            +slider-btn({
+                btn1: 'prew-viewed',
+                btn2 : 'next-viewed',
+                prew: {'icoName': 'left',
+                        'size':'lg'},
+                next: {'icoName': 'right',
+                        'size':'lg'}
+            })
+            +paginator()(class='swiper-pagination-viewed')

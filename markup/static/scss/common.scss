@@ -97,14 +97,17 @@ a {
         margin-top: -40px !important;
     }
 }
-.catalog-main {
+.main-catalog,
+.main-inner {
     flex-grow: 1;
-    margin-top: 100px;
-    background-color: $color-background;
+    margin-top: 120px;
 
     @include mobile {
         margin-top: 75px;
     }
+}
+.main-catalog {
+    background-color: $color-background;
 }
 
 .filter {
@@ -187,9 +190,4 @@ a {
         min-width: 115px;
         font-size: 14px;
     }
-}
-.slider-controls {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 25px;
 }

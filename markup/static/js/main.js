@@ -200,9 +200,11 @@ if (sliderInner) {
     filterBtn.classList.add('active')
     filter.classList.remove('filter--open')
   }
+  if (filterBtn) {
+    filterBtn.addEventListener(`click`, openFilter)
+    closeBtn.addEventListener(`click`, closeFilter)
+  }
 
-  filterBtn.addEventListener(`click`, openFilter)
-  closeBtn.addEventListener(`click`, closeFilter)
 
   // Accordion
 

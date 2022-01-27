@@ -3,7 +3,6 @@ mixin checkbox-list(params)
         each item in params.checkbox
             li.checkbox-list__item
                 - var labelClass = params.labelClass || false;
-                - var inputClass = params.inputClass || false;
                 - var labelText = item.labelText;
                 - var fieldId =item.dif && params.fieldId + '-' + item.dif;
                 - var name = params.name;
@@ -11,7 +10,7 @@ mixin checkbox-list(params)
                 - var checked = item.checked || false;
 
                 !='<!-- input-for: ' + labelText + '-->'
-                input(class=inputClass type='checkbox' id=fieldId name=params.name value=value checked=checked)
+                input(class='visually-hidden' type='checkbox' id=fieldId name=params.name value=value checked=checked)
                 label(class=labelClass for=fieldId) !{labelText}
 
 

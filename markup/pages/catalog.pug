@@ -28,7 +28,7 @@ include ../components/site-contact/site-contact.pug
 include ../components/site-follow/site-follow.pug
 
 append section
-    main.catalog-main
+    main.main-catalog
         h1.visually-hidden Каталог продукции
         .container
             .row.between-xs.vertical-twice-gap-m
@@ -61,7 +61,6 @@ append section
                             })(class='filter__block filter__block--face-care accordion--closed')
                                     +checkbox-list({
                                         labelClass : 'checkbox-list__label',
-                                        inputClass : 'visually-hidden checkbox-list__input',
                                         fieldId : 'filter-face-care',
                                         name : 'face-care',
                                         checkbox : [
@@ -105,7 +104,6 @@ append section
                             })(class='filter__block filter__block--body-care accordion--closed')
                                 +checkbox-list({
                                     labelClass : 'checkbox-list__label',
-                                    inputClass : 'visually-hidden checkbox-list__input',
                                     fieldId : 'filter-body-care',
                                     name : 'body-care',
                                     checkbox : [
@@ -148,7 +146,6 @@ append section
                             })(class='filter__block filter__block--skin-type accordion--closed')
                                 +checkbox-list({
                                     labelClass : 'checkbox-list__label',
-                                    inputClass : 'visually-hidden',
                                     fieldId : 'filter-skin-type',
                                     name : 'skin-type',
                                     checkbox : [
