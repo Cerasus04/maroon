@@ -1,6 +1,6 @@
 mixin slider-btn(params)
     .slider-btns
-        button.slider-btns__btn.slider-btns__btn--prew(type="button" aria-label="Назад")
+        button(class='slider-btns__btn slider-btns__btn--' + params.btn1 type="button" aria-label="Назад")
             +ico-svg(params.prew)
-        button.slider-btns__btn.slider-btns__btn--next(type="button" aria-label="Вперед")
+        button(class='slider-btns__btn slider-btns__btn--' + params.btn2 type="button" aria-label="Вперед")
             +ico-svg(params.next)

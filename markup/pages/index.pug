@@ -144,7 +144,7 @@ append section
                         href: '#'
                     })(class='vertical-twice-gap-m')
                 .col-lg-9.col-sm-8.col-xs-12
-                    .slider.swiper-container
+                    .slider.swiper-container.swiper-container--promo
                         .swiper-wrapper
                             +product-card({
                                 src: '%=static=%img/content/',
@@ -179,6 +179,8 @@ append section
                                 ]
                             })(class='swiper-slide slider__item')
             +slider-btn({
+                btn1: 'prew',
+                btn2 : 'next',
                 prew: {'icoName': 'left',
                         'size':'lg'},
                 next: {'icoName': 'right',

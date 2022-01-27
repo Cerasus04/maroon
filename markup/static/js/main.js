@@ -71,8 +71,9 @@ if (menu) {
 
     closeHeaderMenu()
   }
-const slider = document.querySelector(`.swiper-container`)
+const slider = document.querySelector(`.swiper-container.swiper-container--promo`)
 const sliderInner = document.querySelector(`.swiper-container.swiper-container--inner`)
+const sliderViewed = document.querySelector(`.swiper-container.swiper-container--viewed`)
 
 if (slider) {
   /* eslint-disable no-undef */
@@ -102,7 +103,7 @@ if (slider) {
 
 if (sliderInner) {
     /* eslint-disable no-undef */
-    const mySwiper = new Swiper(`.swiper-container.swiper-container--inner`, {
+    const innerSwiper = new Swiper(`.swiper-container.swiper-container--inner`, {
       init: false,
       loop: true,
       slidesPerColumnFill:"row",
@@ -115,20 +116,20 @@ if (sliderInner) {
         768: {
           slidesPerView: 2,
           slidesPerColumn: 6,
-          slidesPerGroup: 2,
+          slidesPerGroup: 1,
         },
         1366: {
             slidesPerView: 4,
             slidesPerColumn: 3,
-            slidesPerGroup: 4,
+            slidesPerGroup: 1,
         }
       },
       navigation: {
-        nextEl: `.slider-btns__btn--next`,
-        prevEl: `.slider-btns__btn--prew`,
+        nextEl: `.slider-btns__btn--next-inner`,
+        prevEl: `.slider-btns__btn--prew-inner`,
       },
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination-inner',
         type: 'fraction',
         renderFraction: function (currentClass, totalClass) {
             return '<span class="' + currentClass + '"></span>' + '  ——  ' + '<span class="' + totalClass + '"></span>';
@@ -138,7 +139,48 @@ if (sliderInner) {
 
     })
 
-    mySwiper.init()
+    innerSwiper.init()
+    /* eslint-disable no-undef */
+  }
+
+  if (sliderViewed) {
+    /* eslint-disable no-undef */
+    const viewedSwiper = new Swiper(`.swiper-container.swiper-container--viewed`, {
+      init: false,
+      loop: true,
+      slidesPerColumnFill:"row",
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerColumn: 12,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerColumn: 2,
+          slidesPerGroup: 1,
+        },
+        1366: {
+            slidesPerView: 4,
+            slidesPerGroup: 1,
+        }
+      },
+      navigation: {
+        nextEl: `.slider-btns__btn--next-viewed`,
+        prevEl: `.slider-btns__btn--prew-viewed`,
+      },
+      pagination: {
+        el: '.swiper-pagination-viewed',
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + '  ——  ' + '<span class="' + totalClass + '"></span>';
+        },
+      },
+      spaceBetween: 10,
+
+    })
+
+    viewedSwiper.init()
     /* eslint-disable no-undef */
   }
 
@@ -172,7 +214,7 @@ if (sliderInner) {
     const accordionElement = evt.currentTarget.closest(`.accordion`)
     toggleAccordion(accordionElement)
   }
-  const toggler = document.querySelectorAll(`.accordion__toggler`)
+  const toggler = document.querySelectorAll(`.accordion__header`)
 
   for (let i = 0; i < toggler.length; i++) {
     toggler[i].addEventListener(`click`, onAccorderonTogglerClick)
