@@ -1,0 +1,11 @@
+.subtitle {
+    @include word-break;
+    margin: 0;
+    font-family: $font-secondary;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+}

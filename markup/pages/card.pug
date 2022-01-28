@@ -9,7 +9,7 @@ include ../components/link/link.pug
 include ../components/main-title/main-title.pug
 include ../components/title/title.pug
 include ../components/description/description.pug
-include ../components/title/title.pug
+include ../components/subtitle/subtitle.pug
 include ../components/product-card/product-card.pug
 include ../components/slider-btn/slider-btn.pug
 include ../components/block-info/block-info.pug
@@ -21,6 +21,7 @@ include ../components/paginator/paginator.pug
 include ../components/form/form.pug
 include ../components/input/input.pug
 include ../components/checkbox-list/checkbox-list.pug
+include ../components/radio-list/radio-list.pug
 include ../components/accordion/accordion.pug
 include ../components/contacts/contacts.pug
 include ../components/collage/collage.pug
@@ -79,13 +80,13 @@ append section
                     })
                     +description({
                         text: 'крем для лица'
-                    })(class='description--light')
+                    })(class='description--light')(class='vertical-gap-s')
                     +description({
                         text: 'Увлажняющий крем идеально подходит для повседневного ухода за молодой кожей'
-                    })
+                    })(class='vertical-gap-s')
                     +description({
                         text: 'Крем равномерно распределяется по поверхности благодаря легкой текстуре, обеспечивает глубокое увлажнение, регенерацию клеток'
-                    })
+                    })(class='vertical-gap-m')
 
                     +accordion({
                         subtitle: 'Состав',
@@ -107,6 +108,32 @@ append section
                         +description({
                             text: 'Нанесите крем на очищенную кожу лица легкими массажными круговыми движениями, избегая области вокруг глаз. Подходит для дневного и ночного ухода'
                         })
+                    +form({
+                        formClass: 'card-form',
+                        action: 'https://echo.htmlacademy.ru',
+                        method: 'post'
+                    })
+                        .card-form__option
+                            +subtitle({
+                                subtitle: 'Объем: '
+                            })
+                            +radio-list({
+                                labelClass : 'radio-list__label',
+                                fieldId : 'volume',
+                                name : 'face-care',
+                                radio : [
+                                    {
+                                        labelText : '50ml',
+                                        dif : '50',
+                                        value : '50ml',
+                                        checked : true
+                                    },{
+                                        labelText : '30ml',
+                                        dif : '30',
+                                        value : '30ml'
+                                    }
+                                ]
+                            })
         .container.vertical-gap-xl.dec-block
             .row.center-xs.middle-xs
                 .col-xs-12
