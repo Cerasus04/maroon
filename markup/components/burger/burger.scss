@@ -25,16 +25,5 @@
 @include tablet {
     .burger-btn {
         display: block;
-        // height: 18px;
-        // width: 24px;
-        // margin-right: 40px;
-    }
-}
-
-@include mobile {
-    .burger-btn {
-        // height: 14px;
-        // width: 22px;
-        // margin-right: 26px;
     }
 }

@@ -12,22 +12,3 @@ mixin radio-list(params)
                 !='<!-- input-for: ' + labelText + '-->'
                 input(class='visually-hidden' type='radio' id=fieldId name=params.name value=value checked=checked)
                 label(class=labelClass for=fieldId) !{labelText}
-
-
-//-+radio-list({
-    labelClass : 'radio-list__label',
-    fieldId : 'volume',
-    name : 'face-care',
-    radio : [
-        {
-            labelText : '50ml',
-            dif : '50',
-            value : '50ml',
-            checked : true
-        },{
-            labelText : '30ml',
-            dif : '30',
-            value : '30ml'
-        }
-    ]
-    })

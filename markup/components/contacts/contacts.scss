@@ -4,8 +4,7 @@
     margin: 0;
 }
 .contacts-text__name {
-    font: normal 500 18px/145% "Mplus", "Arial", sans-serif;
-    font: $font-secondary;
+    font-family: $font-secondary;
     font-size: 18px;
     line-height: 18px;
     font-weight: 500;
