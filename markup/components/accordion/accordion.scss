@@ -1,5 +1,7 @@
-.accordion {
-
+.accordion--filter {
+    .accordion__toggler-icon {
+        display: none;
+    }
 }
 .accordion__header {
     display: flex;
@@ -9,8 +11,53 @@
 .accordion__subtitle {
 
 }
+.accordion--card.accordion--closed {
+    & .accordion__content {
+        display: none;
+    }
+
+    & .accordion__header {
+        border-bottom: 1px solid $color-border;
+    }
+}
+.accordion__toggler-icon {
+    position: relative;
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .accordion__toggler-icon::after,
+  .accordion__toggler-icon::before {
+    background-color: $color-main-text;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    width: 12px;
+    height: 2px;
+    margin-top: -1px;
+    margin-left: -6px;
+    content: "";
+  }
+
+  .accordion__toggler-icon::after {
+    transform: rotate(90deg) scaleY(0);
+    transition: 0.15s transform;
+  }
+
+  .accordion--closed .accordion__toggler-icon::after {
+    transform: rotate(90deg) scaleY(1);
+  }
 .accordion__toggler {
     display: none;
+}
+.accordion--card {
+    & .accordion__toggler {
+        display: block;
+    }
 }
 .accordion__togler-icon {
 
@@ -20,6 +67,11 @@
 }
 
 @include mobile {
+    .accordion {
+        .accordion__toggler-icon {
+            display: block;
+        }
+    }
     .accordion--closed {
         & .accordion__content {
             display: none;
@@ -32,36 +84,36 @@
     .accordion__toggler {
         display: block;
     }
-    .accordion__toggler-icon {
-        position: relative;
-        display: block;
-        width: 12px;
-        height: 12px;
-        margin-top: auto;
-        margin-bottom: auto;
-      }
+    // .accordion__toggler-icon {
+    //     position: relative;
+    //     display: block;
+    //     width: 12px;
+    //     height: 12px;
+    //     margin-top: auto;
+    //     margin-bottom: auto;
+    //   }
 
-      .accordion__toggler-icon::after,
-      .accordion__toggler-icon::before {
-        background-color: $color-main-text;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        display: block;
-        width: 12px;
-        height: 2px;
-        margin-top: -1px;
-        margin-left: -6px;
-        content: "";
-      }
+    //   .accordion__toggler-icon::after,
+    //   .accordion__toggler-icon::before {
+    //     background-color: $color-main-text;
+    //     position: absolute;
+    //     left: 50%;
+    //     top: 50%;
+    //     display: block;
+    //     width: 12px;
+    //     height: 2px;
+    //     margin-top: -1px;
+    //     margin-left: -6px;
+    //     content: "";
+    //   }
 
-      .accordion__toggler-icon::after {
-        transform: rotate(90deg) scaleY(0);
-        transition: 0.15s transform;
-      }
+    //   .accordion__toggler-icon::after {
+    //     transform: rotate(90deg) scaleY(0);
+    //     transition: 0.15s transform;
+    //   }
 
-      .accordion--closed .accordion__toggler-icon::after {
-        transform: rotate(90deg) scaleY(1);
-      }
+    //   .accordion--closed .accordion__toggler-icon::after {
+    //     transform: rotate(90deg) scaleY(1);
+    //   }
 
 }

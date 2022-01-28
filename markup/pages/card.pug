@@ -30,13 +30,90 @@ include ../components/site-follow/site-follow.pug
 append section
     main.main-inner
         h1.visually-hidden Карточка товара
+        .container.vertical-twice-gap-xl
+            .row
+                .col-lg-6
+                    +picture({
+                         src: '%=static=%img/',
+                        path: 'content',
+                        image: 'care',
+                        format: 'jpg',
+                        width: '670',
+                        height: '451',
+                        altText: 'Индивидуальный уход',
+                        source: [
+                            {
+                                'media' : '(max-width: 1199px)',
+                                'image': 'card-lap',
+                                'format': 'webp',
+                                'type' : 'image/webp'
+                            },{
+                                'media' : '(max-width: 1199px)',
+                                'image': 'card-lap',
+                                'format': 'jpg',
+                                'type' : 'image/jpeg'
+                            },{
+                                'media' : '(max-width: 767px)',
+                                'image': 'card-mob',
+                                'format': 'webp',
+                                'type' : 'image/webp'
+                            },{
+                                'media' : '(max-width: 767px)',
+                                'image': 'card-mob',
+                                'format': 'jpg',
+                                'type' : 'image/jpeg'
+                            },{
+                                'image': 'card',
+                                'format': 'webp',
+                                'type' : 'image/webp'
+                            },{
+                                'image': 'card',
+                                'format': 'jpg',
+                                'type' : 'image/jpeg'
+                            }
+                        ]
+                    })
+                .col-lg-6
+                    +title({
+                        title: 'Rose'
+                    })
+                    +description({
+                        text: 'крем для лица'
+                    })(class='description--light')
+                    +description({
+                        text: 'Увлажняющий крем идеально подходит для повседневного ухода за молодой кожей'
+                    })
+                    +description({
+                        text: 'Крем равномерно распределяется по поверхности благодаря легкой текстуре, обеспечивает глубокое увлажнение, регенерацию клеток'
+                    })
+
+                    +accordion({
+                        subtitle: 'Состав',
+                        btn: {
+                            'size': 'small',
+                            'theme': 'secondary'
+                        }
+                    })(class='accordion--closed accordion--card')
+                        +description({
+                            text: 'Aqua, Cyclomethicone, Dicaprylyl Carbonate, Butylene Glycol, Glycerin, Tapioca Starch, Nelumbium Speciosum Flower Extract, Calendula Officinalis Flower Extract, Propylene Glycol, Tocopherol, Glycine Soja Oil, Dimethiconol, Citronellol, Limonene.'
+                        })
+                    +accordion({
+                        subtitle: 'Способ применения',
+                        btn: {
+                            'size': 'small',
+                            'theme': 'secondary'
+                        }
+                    })(class='accordion--closed accordion--card')
+                        +description({
+                            text: 'Нанесите крем на очищенную кожу лица легкими массажными круговыми движениями, избегая области вокруг глаз. Подходит для дневного и ночного ухода'
+                        })
         .container.vertical-gap-xl.dec-block
             .row.center-xs.middle-xs
                 .col-xs-12
                     +title({
                         title: 'Вы недавно смотрели'
                     })(class='vertical-gap-s')
-            .slider.swiper-container.swiper-container--viewed
+            .slider.swiper-container.swiper-container--viewed.vertical-gap-s
                 .swiper-wrapper
                     +product({
                         path: 'assets/product',
@@ -75,12 +152,15 @@ append section
                             }
                         ]
                     })(class='swiper-slide slider__item')
-            +slider-btn({
-                btn1: 'prew-viewed',
-                btn2 : 'next-viewed',
-                prew: {'icoName': 'left',
-                        'size':'lg'},
-                next: {'icoName': 'right',
-                        'size':'lg'}
-            })
-            +paginator()(class='swiper-pagination-viewed')
+            .row.between-xs
+                .col-xs-2
+                    +paginator()(class='swiper-pagination-viewed')
+                .col-xs-3
+                    +slider-btn({
+                        btn1: 'prew-viewed',
+                        btn2 : 'next-viewed',
+                        prew: {'icoName': 'left',
+                                'size':'lg'},
+                        next: {'icoName': 'right',
+                                'size':'lg'}
+                    })

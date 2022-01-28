@@ -2,3 +2,10 @@
     margin: 0;
     text-align: inherit;
 }
+.description--light {
+    font-family: $font-main;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    color: $color-light-text;
+}
