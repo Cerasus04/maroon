@@ -27,13 +27,14 @@ include ../components/contacts/contacts.pug
 include ../components/collage/collage.pug
 include ../components/site-contact/site-contact.pug
 include ../components/site-follow/site-follow.pug
+include ../components/price/price.pug
 
 append section
     main.main-inner
         h1.visually-hidden Карточка товара
         .container.vertical-twice-gap-xl
             .row
-                .col-lg-6
+                .col-lg-6.col-xs-12
                     +picture({
                          src: '%=static=%img/',
                         path: 'content',
@@ -74,19 +75,19 @@ append section
                             }
                         ]
                     })
-                .col-lg-6
+                .col-lg-6.col-xs-12
                     +title({
                         title: 'Rose'
                     })
                     +description({
                         text: 'крем для лица'
-                    })(class='description--light')(class='vertical-gap-s')
+                    })(class='description--light vertical-gap-s')
                     +description({
                         text: 'Увлажняющий крем идеально подходит для повседневного ухода за молодой кожей'
                     })(class='vertical-gap-s')
                     +description({
                         text: 'Крем равномерно распределяется по поверхности благодаря легкой текстуре, обеспечивает глубокое увлажнение, регенерацию клеток'
-                    })(class='vertical-gap-m')
+                    })(class='vertical-gap-s')
 
                     +accordion({
                         subtitle: 'Состав',
@@ -113,27 +114,38 @@ append section
                         action: 'https://echo.htmlacademy.ru',
                         method: 'post'
                     })
-                        .card-form__option
-                            +subtitle({
-                                subtitle: 'Объем: '
-                            })
-                            +radio-list({
-                                labelClass : 'radio-list__label',
-                                fieldId : 'volume',
-                                name : 'face-care',
-                                radio : [
-                                    {
-                                        labelText : '50ml',
-                                        dif : '50',
-                                        value : '50ml',
-                                        checked : true
-                                    },{
-                                        labelText : '30ml',
-                                        dif : '30',
-                                        value : '30ml'
-                                    }
-                                ]
-                            })
+                        .row.vertical-twice-gap-s.between-xs
+                            .col-xs-4
+                                +subtitle({
+                                    subtitle: 'Объем: '
+                                })
+                            .col-xs-8
+                                +radio-list({
+                                    labelClass : 'radio-list__label',
+                                    fieldId : 'volume',
+                                    name : 'face-care',
+                                    radio : [
+                                        {
+                                            labelText : '50ml',
+                                            dif : '50',
+                                            value : '50ml',
+                                            checked : true
+                                        },{
+                                            labelText : '30ml',
+                                            dif : '30',
+                                            value : '30ml'
+                                        }
+                                    ]
+                                })
+                        .row.middle-xs
+                            .col-xs-4
+                                +price({
+                                    price: '890 ₽'
+                                })
+                            .col-xs-8.col-lg-6
+                                +button({
+                                text: 'Добавить в корзину'
+                                })
         .container.vertical-gap-xl.dec-block
             .row.center-xs.middle-xs
                 .col-xs-12
@@ -180,10 +192,10 @@ append section
                         ]
                     })(class='swiper-slide slider__item')
             .row.between-xs
-                .col-xs-2
+                .col-lg-2.col-xs-4
                     +paginator()(class='swiper-pagination-viewed')
-                .col-xs-3
-                    +slider-btn({
+                .col-lg-3.col-xs-4
+                    +slider-btns({
                         btn1: 'prew-viewed',
                         btn2 : 'next-viewed',
                         prew: {'icoName': 'left',

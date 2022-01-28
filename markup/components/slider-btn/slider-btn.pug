@@ -1,5 +1,5 @@
-mixin slider-btn(params)
-    .slider-btns
+mixin slider-btns(params)
+    .slider-btns&attributes(attributes)
         button(class='slider-btns__btn slider-btns__btn--' + params.btn1 type="button" aria-label="Назад")
             +ico-svg(params.prew)
         button(class='slider-btns__btn slider-btns__btn--' + params.btn2 type="button" aria-label="Вперед")
